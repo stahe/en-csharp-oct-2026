@@ -1213,15 +1213,15 @@
 <span class="normal"><a href="#__codelineno-2-6">6</a></span>
 <span class="normal"><a href="#__codelineno-2-7">7</a></span>
 <span class="normal"><a href="#__codelineno-2-8">8</a></span>
-<span class="normal"><a href="#__codelineno-2-9">9</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1"></a>&lt;Project Sdk="Microsoft.NET.Sdk.Web"&gt;
+<span class="normal"><a href="#__codelineno-2-9">9</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1"></a><span class="nt">&lt;Project</span><span class="w"> </span><span class="na">Sdk=</span><span class="s">"Microsoft.NET.Sdk.Web"</span><span class="nt">&gt;</span>
 <a id="__codelineno-2-2" name="__codelineno-2-2"></a>
-<a id="__codelineno-2-3" name="__codelineno-2-3"></a>  &lt;PropertyGroup&gt;
-<a id="__codelineno-2-4" name="__codelineno-2-4"></a>    &lt;TargetFramework&gt;net10.0&lt;/TargetFramework&gt;
-<a id="__codelineno-2-5" name="__codelineno-2-5"></a>    &lt;Nullable&gt;enable&lt;/Nullable&gt;
-<a id="__codelineno-2-6" name="__codelineno-2-6"></a>    &lt;ImplicitUsings&gt;enable&lt;/ImplicitUsings&gt;
-<a id="__codelineno-2-7" name="__codelineno-2-7"></a>  &lt;/PropertyGroup&gt;
+<a id="__codelineno-2-3" name="__codelineno-2-3"></a><span class="w">  </span><span class="nt">&lt;PropertyGroup&gt;</span>
+<a id="__codelineno-2-4" name="__codelineno-2-4"></a><span class="w">    </span><span class="nt">&lt;TargetFramework&gt;</span>net10.0<span class="nt">&lt;/TargetFramework&gt;</span>
+<a id="__codelineno-2-5" name="__codelineno-2-5"></a><span class="w">    </span><span class="nt">&lt;Nullable&gt;</span>enable<span class="nt">&lt;/Nullable&gt;</span>
+<a id="__codelineno-2-6" name="__codelineno-2-6"></a><span class="w">    </span><span class="nt">&lt;ImplicitUsings&gt;</span>enable<span class="nt">&lt;/ImplicitUsings&gt;</span>
+<a id="__codelineno-2-7" name="__codelineno-2-7"></a><span class="w">  </span><span class="nt">&lt;/PropertyGroup&gt;</span>
 <a id="__codelineno-2-8" name="__codelineno-2-8"></a>
-<a id="__codelineno-2-9" name="__codelineno-2-9"></a>&lt;/Project&gt;
+<a id="__codelineno-2-9" name="__codelineno-2-9"></a><span class="nt">&lt;/Project&gt;</span>
 </code></pre></div></td></tr></table></div>
 <p>Comments:</p>
 <ul>
@@ -1234,12 +1234,12 @@
 <span class="normal"><a href="#__codelineno-3-3">3</a></span>
 <span class="normal"><a href="#__codelineno-3-4">4</a></span>
 <span class="normal"><a href="#__codelineno-3-5">5</a></span>
-<span class="normal"><a href="#__codelineno-3-6">6</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1"></a><span class="kd">var</span><span class="w"> </span><span class="nx">builder</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">WebApplication</span><span class="p">.</span><span class="nx">CreateBuilder</span><span class="p">(</span><span class="nx">args</span><span class="p">);</span>
-<a id="__codelineno-3-2" name="__codelineno-3-2"></a><span class="kd">var</span><span class="w"> </span><span class="nx">app</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">builder</span><span class="p">.</span><span class="nx">Build</span><span class="p">();</span>
+<span class="normal"><a href="#__codelineno-3-6">6</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1"></a><span class="kt">var</span><span class="w"> </span><span class="n">builder</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">WebApplication</span><span class="p">.</span><span class="n">CreateBuilder</span><span class="p">(</span><span class="n">args</span><span class="p">);</span>
+<a id="__codelineno-3-2" name="__codelineno-3-2"></a><span class="kt">var</span><span class="w"> </span><span class="n">app</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">builder</span><span class="p">.</span><span class="n">Build</span><span class="p">();</span>
 <a id="__codelineno-3-3" name="__codelineno-3-3"></a>
-<a id="__codelineno-3-4" name="__codelineno-3-4"></a><span class="nx">app</span><span class="p">.</span><span class="nx">MapGet</span><span class="p">(</span><span class="s2">"/"</span><span class="p">,</span><span class="w"> </span><span class="p">()</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="s2">"Hello World!"</span><span class="p">);</span>
+<a id="__codelineno-3-4" name="__codelineno-3-4"></a><span class="n">app</span><span class="p">.</span><span class="n">MapGet</span><span class="p">(</span><span class="s">"/"</span><span class="p">,</span><span class="w"> </span><span class="p">()</span><span class="w"> </span><span class="o">=&gt;</span><span class="w"> </span><span class="s">"Hello World!"</span><span class="p">);</span>
 <a id="__codelineno-3-5" name="__codelineno-3-5"></a>
-<a id="__codelineno-3-6" name="__codelineno-3-6"></a><span class="nx">app</span><span class="p">.</span><span class="nx">Run</span><span class="p">();</span>
+<a id="__codelineno-3-6" name="__codelineno-3-6"></a><span class="n">app</span><span class="p">.</span><span class="n">Run</span><span class="p">();</span>
 </code></pre></div></td></tr></table></div>
 <ul>
 <li>Line 1: <em>[WebApplication.CreateBuilder]</em> prepares the web application for build: it reads the configuration (<em>[appsettings.json]</em> files, environment variables, command-line arguments), sets up logging, and configures the dependency injection container we used in Chapter 6. <em>[builder]</em> allows you to complete this preparation, for example, by registering services in the container;</li>
@@ -1263,16 +1263,16 @@
 <span class="normal"><a href="#__codelineno-4-7"> 7</a></span>
 <span class="normal"><a href="#__codelineno-4-8"> 8</a></span>
 <span class="normal"><a href="#__codelineno-4-9"> 9</a></span>
-<span class="normal"><a href="#__codelineno-4-10">10</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1"></a>{
-<a id="__codelineno-4-2" name="__codelineno-4-2"></a>  "Logging": {
-<a id="__codelineno-4-3" name="__codelineno-4-3"></a>    "LogLevel": {
-<a id="__codelineno-4-4" name="__codelineno-4-4"></a>      "Default": "Information",
-<a id="__codelineno-4-5" name="__codelineno-4-5"></a>      "Microsoft.AspNetCore": "Warning"
-<a id="__codelineno-4-6" name="__codelineno-4-6"></a>    }
-<a id="__codelineno-4-7" name="__codelineno-4-7"></a>  },
-<a id="__codelineno-4-8" name="__codelineno-4-8"></a>  "AllowedHosts": "*",
-<a id="__codelineno-4-9" name="__codelineno-4-9"></a>  "Urls": "http://localhost:5100"
-<a id="__codelineno-4-10" name="__codelineno-4-10"></a>}
+<span class="normal"><a href="#__codelineno-4-10">10</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1"></a><span class="p">{</span>
+<a id="__codelineno-4-2" name="__codelineno-4-2"></a><span class="w">  </span><span class="nt">"Logging"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-4-3" name="__codelineno-4-3"></a><span class="w">    </span><span class="nt">"LogLevel"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-4-4" name="__codelineno-4-4"></a><span class="w">      </span><span class="nt">"Default"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Information"</span><span class="p">,</span>
+<a id="__codelineno-4-5" name="__codelineno-4-5"></a><span class="w">      </span><span class="nt">"Microsoft.AspNetCore"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Warning"</span>
+<a id="__codelineno-4-6" name="__codelineno-4-6"></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-4-7" name="__codelineno-4-7"></a><span class="w">  </span><span class="p">},</span>
+<a id="__codelineno-4-8" name="__codelineno-4-8"></a><span class="w">  </span><span class="nt">"AllowedHosts"</span><span class="p">:</span><span class="w"> </span><span class="s2">"*"</span><span class="p">,</span>
+<a id="__codelineno-4-9" name="__codelineno-4-9"></a><span class="w">  </span><span class="nt">"Urls"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://localhost:5100"</span>
+<a id="__codelineno-4-10" name="__codelineno-4-10"></a><span class="p">}</span>
 </code></pre></div></td></tr></table></div>
 <ul>
 <li>Lines 2–5: Logging: Messages at level <em>[Information]</em> and above are displayed, except for those from ASP.NET Core itself (category <em>[Microsoft.AspNetCore.*]</em>), which are limited to warnings (<em>[Warning]</em>) and errors;</li>
@@ -1300,25 +1300,25 @@
 <span class="normal"><a href="#__codelineno-5-18">18</a></span>
 <span class="normal"><a href="#__codelineno-5-19">19</a></span>
 <span class="normal"><a href="#__codelineno-5-20">20</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1"></a><span class="c1">// the WsHello web service</span>
-<a id="__codelineno-5-2" name="__codelineno-5-2"></a><span class="kd">var</span><span class="w"> </span><span class="nx">builder</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">WebApplication</span><span class="p">.</span><span class="nx">CreateBuilder</span><span class="p">(</span><span class="nx">args</span><span class="p">);</span>
-<a id="__codelineno-5-3" name="__codelineno-5-3"></a><span class="kd">var</span><span class="w"> </span><span class="nx">app</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">builder</span><span class="p">.</span><span class="nx">Build</span><span class="p">();</span>
+<a id="__codelineno-5-2" name="__codelineno-5-2"></a><span class="kt">var</span><span class="w"> </span><span class="n">builder</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">WebApplication</span><span class="p">.</span><span class="n">CreateBuilder</span><span class="p">(</span><span class="n">args</span><span class="p">);</span>
+<a id="__codelineno-5-3" name="__codelineno-5-3"></a><span class="kt">var</span><span class="w"> </span><span class="n">app</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">builder</span><span class="p">.</span><span class="n">Build</span><span class="p">();</span>
 <a id="__codelineno-5-4" name="__codelineno-5-4"></a>
 <a id="__codelineno-5-5" name="__codelineno-5-5"></a><span class="c1">// the site root: a welcome message</span>
-<a id="__codelineno-5-6" name="__codelineno-5-6"></a><span class="nx">app</span><span class="p">.</span><span class="nx">MapGet</span><span class="p">(</span><span class="s2">"/"</span><span class="p">,</span><span class="w"> </span><span class="p">()</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="s2">"Service web WsHello : essayez /hello/{nom} ou /salutation/{nom}"</span><span class="p">);</span>
+<a id="__codelineno-5-6" name="__codelineno-5-6"></a><span class="n">app</span><span class="p">.</span><span class="n">MapGet</span><span class="p">(</span><span class="s">"/"</span><span class="p">,</span><span class="w"> </span><span class="p">()</span><span class="w"> </span><span class="o">=&gt;</span><span class="w"> </span><span class="s">"Service web WsHello : essayez /hello/{nom} ou /salutation/{nom}"</span><span class="p">);</span>
 <a id="__codelineno-5-7" name="__codelineno-5-7"></a>
 <a id="__codelineno-5-8" name="__codelineno-5-8"></a><span class="c1">// the 2008 web method “DisBonjourALaDame,” which has become URL</span>
 <a id="__codelineno-5-9" name="__codelineno-5-9"></a><span class="c1">// The route parameter {name} is passed to the lambda parameter [nom]</span>
 <a id="__codelineno-5-10" name="__codelineno-5-10"></a><span class="c1">// a string is returned as-is (text/plain)</span>
-<a id="__codelineno-5-11" name="__codelineno-5-11"></a><span class="nx">app</span><span class="p">.</span><span class="nx">MapGet</span><span class="p">(</span><span class="s2">"/hello/{nom}"</span><span class="p">,</span><span class="w"> </span><span class="p">(</span><span class="nx">string</span><span class="w"> </span><span class="nx">nom</span><span class="p">)</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="nx">$</span><span class="s2">"Bonjour Mme {nom}"</span><span class="p">);</span>
+<a id="__codelineno-5-11" name="__codelineno-5-11"></a><span class="n">app</span><span class="p">.</span><span class="n">MapGet</span><span class="p">(</span><span class="s">"/hello/{nom}"</span><span class="p">,</span><span class="w"> </span><span class="p">(</span><span class="kt">string</span><span class="w"> </span><span class="n">nom</span><span class="p">)</span><span class="w"> </span><span class="o">=&gt;</span><span class="w"> </span><span class="s">$"Bonjour Mme {nom}"</span><span class="p">);</span>
 <a id="__codelineno-5-12" name="__codelineno-5-12"></a>
 <a id="__codelineno-5-13" name="__codelineno-5-13"></a><span class="c1">// the same thing with a response JSON: an object is serialized to JSON (application/json)</span>
-<a id="__codelineno-5-14" name="__codelineno-5-14"></a><span class="nx">app</span><span class="p">.</span><span class="nx">MapGet</span><span class="p">(</span><span class="s2">"/salutation/{nom}"</span><span class="p">,</span><span class="w"> </span><span class="p">(</span><span class="nx">string</span><span class="w"> </span><span class="nx">nom</span><span class="p">)</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="ow">new</span><span class="w"> </span><span class="nx">Salutation</span><span class="p">(</span><span class="nx">nom</span><span class="p">,</span><span class="w"> </span><span class="nx">$</span><span class="s2">"Bonjour Mme {nom}"</span><span class="p">));</span>
+<a id="__codelineno-5-14" name="__codelineno-5-14"></a><span class="n">app</span><span class="p">.</span><span class="n">MapGet</span><span class="p">(</span><span class="s">"/salutation/{nom}"</span><span class="p">,</span><span class="w"> </span><span class="p">(</span><span class="kt">string</span><span class="w"> </span><span class="n">nom</span><span class="p">)</span><span class="w"> </span><span class="o">=&gt;</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Salutation</span><span class="p">(</span><span class="n">nom</span><span class="p">,</span><span class="w"> </span><span class="s">$"Bonjour Mme {nom}"</span><span class="p">));</span>
 <a id="__codelineno-5-15" name="__codelineno-5-15"></a>
 <a id="__codelineno-5-16" name="__codelineno-5-16"></a><span class="c1">// The Kestrel web server is waiting for requests</span>
-<a id="__codelineno-5-17" name="__codelineno-5-17"></a><span class="nx">app</span><span class="p">.</span><span class="nx">Run</span><span class="p">();</span>
+<a id="__codelineno-5-17" name="__codelineno-5-17"></a><span class="n">app</span><span class="p">.</span><span class="n">Run</span><span class="p">();</span>
 <a id="__codelineno-5-18" name="__codelineno-5-18"></a>
 <a id="__codelineno-5-19" name="__codelineno-5-19"></a><span class="c1">// the result of the /salutation method</span>
-<a id="__codelineno-5-20" name="__codelineno-5-20"></a><span class="nx">record</span><span class="w"> </span><span class="nx">Salutation</span><span class="p">(</span><span class="nx">string</span><span class="w"> </span><span class="nx">Nom</span><span class="p">,</span><span class="w"> </span><span class="nx">string</span><span class="w"> </span><span class="nx">Message</span><span class="p">);</span>
+<a id="__codelineno-5-20" name="__codelineno-5-20"></a><span class="k">record</span><span class="w"> </span><span class="nf">Salutation</span><span class="p">(</span><span class="kt">string</span><span class="w"> </span><span class="n">Nom</span><span class="p">,</span><span class="w"> </span><span class="kt">string</span><span class="w"> </span><span class="n">Message</span><span class="p">);</span>
 </code></pre></div></td></tr></table></div>
 <p>Comments:</p>
 <ul>
@@ -1536,9 +1536,9 @@
 <p>The 2008 WSDL document described the service in a standardized format. Its current equivalent is the <strong>OpenAPI</strong> document. Since version 9 of .NET, ASP.NET Core can generate it from the declared routes, using the <em>[Microsoft.AspNetCore.OpenApi]</em> package:</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-13-1">1</a></span>
 <span class="normal"><a href="#__codelineno-13-2">2</a></span>
-<span class="normal"><a href="#__codelineno-13-3">3</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-13-1" name="__codelineno-13-1"></a>builder.Services.AddOpenApi();    // before builder.Build()
-<a id="__codelineno-13-2" name="__codelineno-13-2"></a>...
-<a id="__codelineno-13-3" name="__codelineno-13-3"></a>app.MapOpenApi();                 // after builder.Build(): publishes /openapi/v1.json
+<span class="normal"><a href="#__codelineno-13-3">3</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-13-1" name="__codelineno-13-1"></a><span class="n">builder</span><span class="p">.</span><span class="n">Services</span><span class="p">.</span><span class="n">AddOpenApi</span><span class="p">();</span><span class="w">    </span><span class="c1">// before builder.Build()</span>
+<a id="__codelineno-13-2" name="__codelineno-13-2"></a><span class="p">...</span>
+<a id="__codelineno-13-3" name="__codelineno-13-3"></a><span class="n">app</span><span class="p">.</span><span class="n">MapOpenApi</span><span class="p">();</span><span class="w">                 </span><span class="c1">// after builder.Build(): publishes /openapi/v1.json</span>
 </code></pre></div></td></tr></table></div>
 <p>The <em>[/openapi/v1.json]</em> document then describes each route: its URL, its HTTP method, its parameters and their types, and the JSON schema for its responses. Tools like Swagger UI or Scalar generate a test web page from it, and generators like Kiota or NSwag generate a typed client in various languages, just as the “Add Web Reference” wizard did with the WSDL. Since the <em>[Microsoft.AspNetCore.OpenApi]</em> package is not available on our test machine (which does not have Internet access), we cannot show the generated document.</p>
 <h2 id="133-a-web-service-for-arithmetic-operations">13.3. <span style="color: #2e74b5">A Web Service for Arithmetic Operations</span></h2>
@@ -2065,21 +2065,21 @@
 <span class="normal"><a href="#__codelineno-22-12">12</a></span>
 <span class="normal"><a href="#__codelineno-22-13">13</a></span>
 <span class="normal"><a href="#__codelineno-22-14">14</a></span>
-<span class="normal"><a href="#__codelineno-22-15">15</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-22-1" name="__codelineno-22-1"></a><span class="o">&lt;</span><span class="n">Project</span> <span class="n">Sdk</span><span class="o">=</span><span class="s2">"Microsoft.NET.Sdk.Web"</span><span class="o">&gt;</span>
+<span class="normal"><a href="#__codelineno-22-15">15</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-22-1" name="__codelineno-22-1"></a><span class="nt">&lt;Project</span><span class="w"> </span><span class="na">Sdk=</span><span class="s">"Microsoft.NET.Sdk.Web"</span><span class="nt">&gt;</span>
 <a id="__codelineno-22-2" name="__codelineno-22-2"></a>
-<a id="__codelineno-22-3" name="__codelineno-22-3"></a>  <span class="o">&lt;</span><span class="n">PropertyGroup</span><span class="o">&gt;</span>
-<a id="__codelineno-22-4" name="__codelineno-22-4"></a>    <span class="o">&lt;</span><span class="n">TargetFramework</span><span class="o">&gt;</span><span class="n">net10</span><span class="mf">.0</span><span class="o">&lt;/</span><span class="n">TargetFramework</span><span class="o">&gt;</span>
-<a id="__codelineno-22-5" name="__codelineno-22-5"></a>    <span class="o">&lt;</span><span class="n">Nullable</span><span class="o">&gt;</span><span class="n">enable</span><span class="o">&lt;/</span><span class="n">Nullable</span><span class="o">&gt;</span>
-<a id="__codelineno-22-6" name="__codelineno-22-6"></a>    <span class="o">&lt;</span><span class="n">ImplicitUsings</span><span class="o">&gt;</span><span class="n">enable</span><span class="o">&lt;/</span><span class="n">ImplicitUsings</span><span class="o">&gt;</span>
-<a id="__codelineno-22-7" name="__codelineno-22-7"></a>  <span class="o">&lt;/</span><span class="n">PropertyGroup</span><span class="o">&gt;</span>
+<a id="__codelineno-22-3" name="__codelineno-22-3"></a><span class="w">  </span><span class="nt">&lt;PropertyGroup&gt;</span>
+<a id="__codelineno-22-4" name="__codelineno-22-4"></a><span class="w">    </span><span class="nt">&lt;TargetFramework&gt;</span>net10.0<span class="nt">&lt;/TargetFramework&gt;</span>
+<a id="__codelineno-22-5" name="__codelineno-22-5"></a><span class="w">    </span><span class="nt">&lt;Nullable&gt;</span>enable<span class="nt">&lt;/Nullable&gt;</span>
+<a id="__codelineno-22-6" name="__codelineno-22-6"></a><span class="w">    </span><span class="nt">&lt;ImplicitUsings&gt;</span>enable<span class="nt">&lt;/ImplicitUsings&gt;</span>
+<a id="__codelineno-22-7" name="__codelineno-22-7"></a><span class="w">  </span><span class="nt">&lt;/PropertyGroup&gt;</span>
 <a id="__codelineno-22-8" name="__codelineno-22-8"></a>
-<a id="__codelineno-22-9" name="__codelineno-22-9"></a>  <span class="o">&lt;</span><span class="n">ItemGroup</span><span class="o">&gt;</span>
-<a id="__codelineno-22-10" name="__codelineno-22-10"></a>     <span class="o">&lt;</span><span class="err">!</span><span class="o">--</span> <span class="n">the</span> <span class="n">layers</span> <span class="p">[</span><span class="n">dao</span><span class="p">]</span> <span class="ow">and</span> <span class="p">[</span><span class="n">metier</span><span class="p">]</span> <span class="kn">from</span><span class="w"> </span><span class="nn">version</span> <span class="mi">5</span><span class="p">,</span> <span class="n">reused</span> <span class="k">as</span><span class="o">-</span><span class="ow">is</span> <span class="o">--&gt;</span>
-<a id="__codelineno-22-11" name="__codelineno-22-11"></a>    <span class="o">&lt;</span><span class="n">ProjectReference</span> <span class="n">Include</span><span class="o">=</span><span class="s2">"../../06-architectures/ImpotsV5/Impots.Dao/Impots.Dao.csproj"</span> <span class="o">/&gt;</span>
-<a id="__codelineno-22-12" name="__codelineno-22-12"></a>    <span class="o">&lt;</span><span class="n">ProjectReference</span> <span class="n">Include</span><span class="o">=</span><span class="s2">"../../06-architectures/ImpotsV5/Impots.Metier/Impots.Metier.csproj"</span> <span class="o">/&gt;</span>
-<a id="__codelineno-22-13" name="__codelineno-22-13"></a>  <span class="o">&lt;/</span><span class="n">ItemGroup</span><span class="o">&gt;</span>
+<a id="__codelineno-22-9" name="__codelineno-22-9"></a><span class="w">  </span><span class="nt">&lt;ItemGroup&gt;</span>
+<a id="__codelineno-22-10" name="__codelineno-22-10"></a><span class="w">     </span><span class="cm">&lt;!-- the layers [dao] and [metier] from version 5, reused as-is --&gt;</span>
+<a id="__codelineno-22-11" name="__codelineno-22-11"></a><span class="w">    </span><span class="nt">&lt;ProjectReference</span><span class="w"> </span><span class="na">Include=</span><span class="s">"../../06-architectures/ImpotsV5/Impots.Dao/Impots.Dao.csproj"</span><span class="w"> </span><span class="nt">/&gt;</span>
+<a id="__codelineno-22-12" name="__codelineno-22-12"></a><span class="w">    </span><span class="nt">&lt;ProjectReference</span><span class="w"> </span><span class="na">Include=</span><span class="s">"../../06-architectures/ImpotsV5/Impots.Metier/Impots.Metier.csproj"</span><span class="w"> </span><span class="nt">/&gt;</span>
+<a id="__codelineno-22-13" name="__codelineno-22-13"></a><span class="w">  </span><span class="nt">&lt;/ItemGroup&gt;</span>
 <a id="__codelineno-22-14" name="__codelineno-22-14"></a>
-<a id="__codelineno-22-15" name="__codelineno-22-15"></a><span class="o">&lt;/</span><span class="n">Project</span><span class="o">&gt;</span>
+<a id="__codelineno-22-15" name="__codelineno-22-15"></a><span class="nt">&lt;/Project&gt;</span>
 </code></pre></div></td></tr></table></div>
 <ul>
 <li>Lines 11–12: the two project references. They are added using the command <strong><em>[dotnet add WsImpot reference ../06-architectures/ImpotsV5/Impots.Dao ../06-architectures/ImpotsV5/Impots.Metier]</em></strong>, entered in the <em>[13-services-web]</em> folder (not necessary for the delivered project, where they are already present). The data files <em>[DataImpot.txt]</em> and <em>[DataImpot.json]</em> from the <em>[Impots.Dao]</em> project are copied next to the service executable (Chapter 6).</li>
@@ -2098,20 +2098,20 @@
 <span class="normal"><a href="#__codelineno-23-11">11</a></span>
 <span class="normal"><a href="#__codelineno-23-12">12</a></span>
 <span class="normal"><a href="#__codelineno-23-13">13</a></span>
-<span class="normal"><a href="#__codelineno-23-14">14</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-23-1" name="__codelineno-23-1"></a>{
-<a id="__codelineno-23-2" name="__codelineno-23-2"></a>  "Logging": {
-<a id="__codelineno-23-3" name="__codelineno-23-3"></a>    "LogLevel": {
-<a id="__codelineno-23-4" name="__codelineno-23-4"></a>      "Default": "Information",
-<a id="__codelineno-23-5" name="__codelineno-23-5"></a>      "Microsoft.AspNetCore": "Warning"
-<a id="__codelineno-23-6" name="__codelineno-23-6"></a>    }
-<a id="__codelineno-23-7" name="__codelineno-23-7"></a>  },
-<a id="__codelineno-23-8" name="__codelineno-23-8"></a>  "AllowedHosts": "*",
-<a id="__codelineno-23-9" name="__codelineno-23-9"></a>  "Urls": "http://localhost:5120",
-<a id="__codelineno-23-10" name="__codelineno-23-10"></a>  "Dao": {
-<a id="__codelineno-23-11" name="__codelineno-23-11"></a>    "Implementation": "JsonImpot",
-<a id="__codelineno-23-12" name="__codelineno-23-12"></a>    "Fichier": "DataImpot.json"
-<a id="__codelineno-23-13" name="__codelineno-23-13"></a>  }
-<a id="__codelineno-23-14" name="__codelineno-23-14"></a>}
+<span class="normal"><a href="#__codelineno-23-14">14</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-23-1" name="__codelineno-23-1"></a><span class="p">{</span>
+<a id="__codelineno-23-2" name="__codelineno-23-2"></a><span class="w">  </span><span class="nt">"Logging"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-23-3" name="__codelineno-23-3"></a><span class="w">    </span><span class="nt">"LogLevel"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-23-4" name="__codelineno-23-4"></a><span class="w">      </span><span class="nt">"Default"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Information"</span><span class="p">,</span>
+<a id="__codelineno-23-5" name="__codelineno-23-5"></a><span class="w">      </span><span class="nt">"Microsoft.AspNetCore"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Warning"</span>
+<a id="__codelineno-23-6" name="__codelineno-23-6"></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-23-7" name="__codelineno-23-7"></a><span class="w">  </span><span class="p">},</span>
+<a id="__codelineno-23-8" name="__codelineno-23-8"></a><span class="w">  </span><span class="nt">"AllowedHosts"</span><span class="p">:</span><span class="w"> </span><span class="s2">"*"</span><span class="p">,</span>
+<a id="__codelineno-23-9" name="__codelineno-23-9"></a><span class="w">  </span><span class="nt">"Urls"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://localhost:5120"</span><span class="p">,</span>
+<a id="__codelineno-23-10" name="__codelineno-23-10"></a><span class="w">  </span><span class="nt">"Dao"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-23-11" name="__codelineno-23-11"></a><span class="w">    </span><span class="nt">"Implementation"</span><span class="p">:</span><span class="w"> </span><span class="s2">"JsonImpot"</span><span class="p">,</span>
+<a id="__codelineno-23-12" name="__codelineno-23-12"></a><span class="w">    </span><span class="nt">"Fichier"</span><span class="p">:</span><span class="w"> </span><span class="s2">"DataImpot.json"</span>
+<a id="__codelineno-23-13" name="__codelineno-23-13"></a><span class="w">  </span><span class="p">}</span>
+<a id="__codelineno-23-14" name="__codelineno-23-14"></a><span class="p">}</span>
 </code></pre></div></td></tr></table></div>
 <ul>
 <li>line 9: the service listens on port 5120;</li>
@@ -2407,27 +2407,27 @@
 <span class="normal"><a href="#__codelineno-29-18">18</a></span>
 <span class="normal"><a href="#__codelineno-29-19">19</a></span>
 <span class="normal"><a href="#__codelineno-29-20">20</a></span>
-<span class="normal"><a href="#__codelineno-29-21">21</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-29-1" name="__codelineno-29-1"></a>&lt;Project Sdk="Microsoft.NET.Sdk"&gt;
+<span class="normal"><a href="#__codelineno-29-21">21</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-29-1" name="__codelineno-29-1"></a><span class="nt">&lt;Project</span><span class="w"> </span><span class="na">Sdk=</span><span class="s">"Microsoft.NET.Sdk"</span><span class="nt">&gt;</span>
 <a id="__codelineno-29-2" name="__codelineno-29-2"></a>
-<a id="__codelineno-29-3" name="__codelineno-29-3"></a>  &lt;PropertyGroup&gt;
-<a id="__codelineno-29-4" name="__codelineno-29-4"></a>    &lt;OutputType&gt;Exe&lt;/OutputType&gt;
-<a id="__codelineno-29-5" name="__codelineno-29-5"></a>    &lt;TargetFramework&gt;net10.0&lt;/TargetFramework&gt;
-<a id="__codelineno-29-6" name="__codelineno-29-6"></a>    &lt;ImplicitUsings&gt;enable&lt;/ImplicitUsings&gt;
-<a id="__codelineno-29-7" name="__codelineno-29-7"></a>    &lt;Nullable&gt;enable&lt;/Nullable&gt;
-<a id="__codelineno-29-8" name="__codelineno-29-8"></a>  &lt;/PropertyGroup&gt;
+<a id="__codelineno-29-3" name="__codelineno-29-3"></a><span class="w">  </span><span class="nt">&lt;PropertyGroup&gt;</span>
+<a id="__codelineno-29-4" name="__codelineno-29-4"></a><span class="w">    </span><span class="nt">&lt;OutputType&gt;</span>Exe<span class="nt">&lt;/OutputType&gt;</span>
+<a id="__codelineno-29-5" name="__codelineno-29-5"></a><span class="w">    </span><span class="nt">&lt;TargetFramework&gt;</span>net10.0<span class="nt">&lt;/TargetFramework&gt;</span>
+<a id="__codelineno-29-6" name="__codelineno-29-6"></a><span class="w">    </span><span class="nt">&lt;ImplicitUsings&gt;</span>enable<span class="nt">&lt;/ImplicitUsings&gt;</span>
+<a id="__codelineno-29-7" name="__codelineno-29-7"></a><span class="w">    </span><span class="nt">&lt;Nullable&gt;</span>enable<span class="nt">&lt;/Nullable&gt;</span>
+<a id="__codelineno-29-8" name="__codelineno-29-8"></a><span class="w">  </span><span class="nt">&lt;/PropertyGroup&gt;</span>
 <a id="__codelineno-29-9" name="__codelineno-29-9"></a>
-<a id="__codelineno-29-10" name="__codelineno-29-10"></a>  &lt;ItemGroup&gt;
-<a id="__codelineno-29-11" name="__codelineno-29-11"></a>     &lt;!-- the interface of layer [metier] and layer [ui] in version 5 --&gt;
-<a id="__codelineno-29-12" name="__codelineno-29-12"></a>    &lt;ProjectReference Include="../../06-architectures/ImpotsV5/Impots.Metier/Impots.Metier.csproj" /&gt;
-<a id="__codelineno-29-13" name="__codelineno-29-13"></a>    &lt;ProjectReference Include="../../06-architectures/ImpotsV5/Impots.Ui/Impots.Ui.csproj" /&gt;
-<a id="__codelineno-29-14" name="__codelineno-29-14"></a>  &lt;/ItemGroup&gt;
+<a id="__codelineno-29-10" name="__codelineno-29-10"></a><span class="w">  </span><span class="nt">&lt;ItemGroup&gt;</span>
+<a id="__codelineno-29-11" name="__codelineno-29-11"></a><span class="w">     </span><span class="cm">&lt;!-- the interface of layer [metier] and layer [ui] in version 5 --&gt;</span>
+<a id="__codelineno-29-12" name="__codelineno-29-12"></a><span class="w">    </span><span class="nt">&lt;ProjectReference</span><span class="w"> </span><span class="na">Include=</span><span class="s">"../../06-architectures/ImpotsV5/Impots.Metier/Impots.Metier.csproj"</span><span class="w"> </span><span class="nt">/&gt;</span>
+<a id="__codelineno-29-13" name="__codelineno-29-13"></a><span class="w">    </span><span class="nt">&lt;ProjectReference</span><span class="w"> </span><span class="na">Include=</span><span class="s">"../../06-architectures/ImpotsV5/Impots.Ui/Impots.Ui.csproj"</span><span class="w"> </span><span class="nt">/&gt;</span>
+<a id="__codelineno-29-14" name="__codelineno-29-14"></a><span class="w">  </span><span class="nt">&lt;/ItemGroup&gt;</span>
 <a id="__codelineno-29-15" name="__codelineno-29-15"></a>
-<a id="__codelineno-29-16" name="__codelineno-29-16"></a>  &lt;ItemGroup&gt;
-<a id="__codelineno-29-17" name="__codelineno-29-17"></a>     &lt;!-- the HTTP client factory integrated into the dependency injection container --&gt;
-<a id="__codelineno-29-18" name="__codelineno-29-18"></a>    &lt;PackageReference Include="Microsoft.Extensions.Http" Version="10.0.12" /&gt;
-<a id="__codelineno-29-19" name="__codelineno-29-19"></a>  &lt;/ItemGroup&gt;
+<a id="__codelineno-29-16" name="__codelineno-29-16"></a><span class="w">  </span><span class="nt">&lt;ItemGroup&gt;</span>
+<a id="__codelineno-29-17" name="__codelineno-29-17"></a><span class="w">     </span><span class="cm">&lt;!-- the HTTP client factory integrated into the dependency injection container --&gt;</span>
+<a id="__codelineno-29-18" name="__codelineno-29-18"></a><span class="w">    </span><span class="nt">&lt;PackageReference</span><span class="w"> </span><span class="na">Include=</span><span class="s">"Microsoft.Extensions.Http"</span><span class="w"> </span><span class="na">Version=</span><span class="s">"10.0.12"</span><span class="w"> </span><span class="nt">/&gt;</span>
+<a id="__codelineno-29-19" name="__codelineno-29-19"></a><span class="w">  </span><span class="nt">&lt;/ItemGroup&gt;</span>
 <a id="__codelineno-29-20" name="__codelineno-29-20"></a>
-<a id="__codelineno-29-21" name="__codelineno-29-21"></a>&lt;/Project&gt;
+<a id="__codelineno-29-21" name="__codelineno-29-21"></a><span class="nt">&lt;/Project&gt;</span>
 </code></pre></div></td></tr></table></div>
 <ul>
 <li>Lines 12–13: References to projects in Version 5: <em>[Impots.Metier]</em> for the <em>[IImpotMetier]</em> interface, and <em>[Impots.Ui]</em> for the <em>[Dialogue]</em> class. A project can reference an executable project: in this case, it uses its public classes without running its main program. The project <em>[Impots.Dao]</em> is referenced indirectly (via <em>[Impots.Metier]</em>): the client uses only the class <em>[ImpotException]</em> from it;</li>
@@ -3035,9 +3035,9 @@
 <p>When multiple routes share a prefix and configuration, they can be grouped using <em>[MapGroup]</em>. For example, to place the routes of the operations department under <em>[/api/operations]</em>:</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-38-1">1</a></span>
 <span class="normal"><a href="#__codelineno-38-2">2</a></span>
-<span class="normal"><a href="#__codelineno-38-3">3</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-38-1" name="__codelineno-38-1"></a><span class="kd">var</span><span class="w"> </span><span class="nx">operations</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">app</span><span class="p">.</span><span class="nx">MapGroup</span><span class="p">(</span><span class="s2">"/api/operations"</span><span class="p">);</span>
-<a id="__codelineno-38-2" name="__codelineno-38-2"></a><span class="nx">operations</span><span class="p">.</span><span class="nx">MapGet</span><span class="p">(</span><span class="s2">"/{operation}"</span><span class="p">,</span><span class="w"> </span><span class="p">(</span><span class="nx">string</span><span class="w"> </span><span class="nx">operation</span><span class="p">,</span><span class="w"> </span><span class="nx">string</span><span class="o">?</span><span class="w"> </span><span class="nx">a</span><span class="p">,</span><span class="w"> </span><span class="nx">string</span><span class="o">?</span><span class="w"> </span><span class="nx">b</span><span class="p">)</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">...);</span><span class="w">  </span><span class="c1">// GET /api/operations/add?a=1&amp;b=2</span>
-<a id="__codelineno-38-3" name="__codelineno-38-3"></a><span class="nx">operations</span><span class="p">.</span><span class="nx">MapPost</span><span class="p">(</span><span class="s2">"/"</span><span class="p">,</span><span class="w"> </span><span class="p">(</span><span class="nx">DemandeCalcul</span><span class="w"> </span><span class="nx">demande</span><span class="p">)</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">...);</span><span class="w">                                </span><span class="c1">// POST /api/operations</span>
+<span class="normal"><a href="#__codelineno-38-3">3</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-38-1" name="__codelineno-38-1"></a><span class="kt">var</span><span class="w"> </span><span class="n">operations</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">app</span><span class="p">.</span><span class="n">MapGroup</span><span class="p">(</span><span class="s">"/api/operations"</span><span class="p">);</span>
+<a id="__codelineno-38-2" name="__codelineno-38-2"></a><span class="n">operations</span><span class="p">.</span><span class="n">MapGet</span><span class="p">(</span><span class="s">"/{operation}"</span><span class="p">,</span><span class="w"> </span><span class="p">(</span><span class="kt">string</span><span class="w"> </span><span class="n">operation</span><span class="p">,</span><span class="w"> </span><span class="kt">string?</span><span class="w"> </span><span class="n">a</span><span class="p">,</span><span class="w"> </span><span class="kt">string?</span><span class="w"> </span><span class="n">b</span><span class="p">)</span><span class="w"> </span><span class="o">=&gt;</span><span class="w"> </span><span class="p">...);</span><span class="w">  </span><span class="c1">// GET /api/operations/add?a=1&amp;b=2</span>
+<a id="__codelineno-38-3" name="__codelineno-38-3"></a><span class="n">operations</span><span class="p">.</span><span class="n">MapPost</span><span class="p">(</span><span class="s">"/"</span><span class="p">,</span><span class="w"> </span><span class="p">(</span><span class="n">DemandeCalcul</span><span class="w"> </span><span class="n">demande</span><span class="p">)</span><span class="w"> </span><span class="o">=&gt;</span><span class="w"> </span><span class="p">...);</span><span class="w">                                </span><span class="c1">// POST /api/operations</span>
 </code></pre></div></td></tr></table></div>
 <p>Anything applied to the group (a filter, an authentication requirement, metadata for OpenAPI) applies to all of its routes.</p>
 <h3 id="1373-filters-and-validation">13.7.3. <span style="color: #1f4d78">Filters and Validation</span></h3>

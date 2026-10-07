@@ -1605,7 +1605,7 @@
 <li><em>[System.Half]</em> (.NET 5) is a 2-byte, low-precision floating-point number used in graphics computing and machine learning. It is not a predefined language type: it does not have a C# keyword.</li>
 </ul>
 <p>A structure, like a class, is a complex type with properties and methods. Thus, we can write:</p>
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-6-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1"></a>string? nomDuType = 3.GetType().FullName;
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-6-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1"></a><span class="kt">string?</span><span class="w"> </span><span class="n">nomDuType</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">3</span><span class="p">.</span><span class="n">GetType</span><span class="p">().</span><span class="n">FullName</span><span class="p">;</span>
 </code></pre></div></td></tr></table></div>
 <p>The literal 3 is by default of type C# <em>[int]</em>, and therefore of type .NET <em>[System.Int32]</em>. This structure has a method <em>[GetType()]</em> that returns an object describing the data type. Among the properties of this object, <em>[FullName]</em> is the full name of the type. The literal 3 is therefore a more complex object than it appears at first glance. The question mark in <em>[string?]</em> will be explained a little later.</p>
 <p>The program <em>[bases-03.cs]</em> illustrates these various points:</p>
@@ -1901,10 +1901,10 @@
 <p>A program manipulates data characterized by a name and a type. This data is stored in memory. When the program is compiled, the compiler assigns each piece of data a memory location characterized by an address and a size. It does this based on the declarations made by the programmer. Furthermore, these declarations allow the compiler to detect programming errors. Thus, the operation <strong><em>[x = x * 2;]</em></strong> will be declared invalid if <em>[x]</em> is a character string.</p>
 <h4 id="3332-declaring-constants">3.3.3.2. <span style="color: #2e74b5">Declaring Constants</span></h4>
 <p>The syntax for declaring a constant is as follows:</p>
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-11-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-11-1" name="__codelineno-11-1"></a>const type nom = valeur;
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-11-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-11-1" name="__codelineno-11-1"></a><span class="k">const</span><span class="w"> </span><span class="n">type</span><span class="w"> </span><span class="n">nom</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">valeur</span><span class="p">;</span>
 </code></pre></div></td></tr></table></div>
 <p>For example:</p>
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-12-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-12-1" name="__codelineno-12-1"></a>const double TauxTva = 0.2;
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-12-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-12-1" name="__codelineno-12-1"></a><span class="k">const</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="n">TauxTva</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">0.2</span><span class="p">;</span>
 </code></pre></div></td></tr></table></div>
 <p>Why declare constants?</p>
 <ul>
@@ -1915,11 +1915,11 @@
 <h4 id="3333-variable-declaration">3.3.3.3. <span style="color: #2e74b5">Variable Declaration</span></h4>
 <p>A variable is identified by a name and is associated with a data type. C# distinguishes between uppercase and lowercase letters: the variables <em>[FIN]</em> and <em>[fin]</em> are different.</p>
 <p>Variables can be initialized when they are declared. The syntax for declaring one or more variables is:</p>
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-13-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-13-1" name="__codelineno-13-1"></a>type variable1 = valeur1, variable2 = valeur2, ...;
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-13-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-13-1" name="__codelineno-13-1"></a><span class="n">type</span><span class="w"> </span><span class="n">variable1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">valeur1</span><span class="p">,</span><span class="w"> </span><span class="n">variable2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">valeur2</span><span class="p">,</span><span class="w"> </span><span class="p">...;</span>
 </code></pre></div></td></tr></table></div>
 <p>where <em>[type]</em> is a predefined type or a type defined by the programmer. Initialization is optional; however, C# does not allow the use of a local variable that has not yet been assigned a value.</p>
 <p>You can also omit the type of a variable by using the keyword <em>[var]</em> in place of the type:</p>
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-14-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-14-1" name="__codelineno-14-1"></a><span class="kd">var</span><span class="w"> </span><span class="nx">variable1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">valeur1</span><span class="p">;</span>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-14-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-14-1" name="__codelineno-14-1"></a><span class="kt">var</span><span class="w"> </span><span class="n">variable1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">valeur1</span><span class="p">;</span>
 </code></pre></div></td></tr></table></div>
 <p>The keyword <em>[var]</em> does not mean that the variable has no specific type: it has the type of the value assigned to it, as determined by the compiler. Initialization is required here so that the compiler can deduce the type. We use <em>[var]</em> when the type is obvious from the value.</p>
 <p>The program <em>[bases-05.cs]</em> is as follows:</p>
@@ -1976,13 +1976,13 @@
 <span class="normal"><a href="#__codelineno-16-4">4</a></span>
 <span class="normal"><a href="#__codelineno-16-5">5</a></span>
 <span class="normal"><a href="#__codelineno-16-6">6</a></span>
-<span class="normal"><a href="#__codelineno-16-7">7</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-16-1" name="__codelineno-16-1"></a><span class="o">&gt;</span><span class="w"> </span><span class="nx">dotnet</span><span class="w"> </span><span class="nx">run</span><span class="w"> </span><span class="nx">bases</span><span class="o">-</span><span class="mo">05</span><span class="p">.</span><span class="nx">cs</span>
-<a id="__codelineno-16-2" name="__codelineno-16-2"></a><span class="nx">Prix</span><span class="w"> </span><span class="nx">TTC</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="mf">120</span><span class="w"> </span><span class="nx">euros</span>
-<a id="__codelineno-16-3" name="__codelineno-16-3"></a><span class="nx">Type</span><span class="w"> </span><span class="nx">de</span><span class="w"> </span><span class="kr">int</span><span class="w"> </span><span class="nx">i</span><span class="o">=</span><span class="mf">2</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="nx">Int32</span><span class="p">,</span><span class="nx">System</span><span class="p">.</span><span class="nx">Int32</span>
-<a id="__codelineno-16-4" name="__codelineno-16-4"></a><span class="nx">Type</span><span class="w"> </span><span class="nx">de</span><span class="w"> </span><span class="kd">var</span><span class="w"> </span><span class="nx">j</span><span class="o">=</span><span class="mf">3</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="nx">Int32</span><span class="p">,</span><span class="nx">System</span><span class="p">.</span><span class="nx">Int32</span>
-<a id="__codelineno-16-5" name="__codelineno-16-5"></a><span class="nx">Type</span><span class="w"> </span><span class="nx">de</span><span class="w"> </span><span class="kd">var</span><span class="w"> </span><span class="nx">aujourdhui</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="nx">DateTime</span><span class="p">,</span><span class="nx">System</span><span class="p">.</span><span class="nx">DateTime</span>
-<a id="__codelineno-16-6" name="__codelineno-16-6"></a><span class="nx">x</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="nx">Double</span><span class="p">,</span><span class="w"> </span><span class="nx">y</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="nx">Single</span><span class="p">,</span><span class="w"> </span><span class="nx">z</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="nx">Int64</span><span class="p">,</span><span class="w"> </span><span class="nx">nom</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="nb">String</span>
-<a id="__codelineno-16-7" name="__codelineno-16-7"></a><span class="nx">a</span><span class="o">=</span><span class="mf">1</span><span class="p">,</span><span class="w"> </span><span class="nx">b</span><span class="o">=</span><span class="mf">4</span><span class="p">,</span><span class="w"> </span><span class="nx">c</span><span class="o">=</span><span class="mf">3</span>
+<span class="normal"><a href="#__codelineno-16-7">7</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-16-1" name="__codelineno-16-1"></a>&gt; dotnet run bases-05.cs
+<a id="__codelineno-16-2" name="__codelineno-16-2"></a>Prix TTC : 120 euros
+<a id="__codelineno-16-3" name="__codelineno-16-3"></a>Type de int i=2 : Int32,System.Int32
+<a id="__codelineno-16-4" name="__codelineno-16-4"></a>Type de var j=3 : Int32,System.Int32
+<a id="__codelineno-16-5" name="__codelineno-16-5"></a>Type de var aujourdhui : DateTime,System.DateTime
+<a id="__codelineno-16-6" name="__codelineno-16-6"></a>x : Double, y : Single, z : Int64, nom : String
+<a id="__codelineno-16-7" name="__codelineno-16-7"></a>a=1, b=4, c=3
 </code></pre></div></td></tr></table></div>
 <p>Comments:</p>
 <ul>
@@ -2124,15 +2124,15 @@
 <span class="normal"><a href="#__codelineno-21-6">6</a></span>
 <span class="normal"><a href="#__codelineno-21-7">7</a></span>
 <span class="normal"><a href="#__codelineno-21-8">8</a></span>
-<span class="normal"><a href="#__codelineno-21-9">9</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-21-1" name="__codelineno-21-1"></a>try
-<a id="__codelineno-21-2" name="__codelineno-21-2"></a>{
-<a id="__codelineno-21-3" name="__codelineno-21-3"></a>    appel de la fonction susceptible de générer l'exception
-<a id="__codelineno-21-4" name="__codelineno-21-4"></a>}
-<a id="__codelineno-21-5" name="__codelineno-21-5"></a>catch (Exception e)
-<a id="__codelineno-21-6" name="__codelineno-21-6"></a>{
-<a id="__codelineno-21-7" name="__codelineno-21-7"></a>    traiter l'exception e
-<a id="__codelineno-21-8" name="__codelineno-21-8"></a>}
-<a id="__codelineno-21-9" name="__codelineno-21-9"></a>instruction suivante
+<span class="normal"><a href="#__codelineno-21-9">9</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-21-1" name="__codelineno-21-1"></a><span class="k">try</span>
+<a id="__codelineno-21-2" name="__codelineno-21-2"></a><span class="p">{</span>
+<a id="__codelineno-21-3" name="__codelineno-21-3"></a><span class="w">    </span><span class="n">appel</span><span class="w"> </span><span class="n">de</span><span class="w"> </span><span class="n">la</span><span class="w"> </span><span class="n">fonction</span><span class="w"> </span><span class="n">susceptible</span><span class="w"> </span><span class="n">de</span><span class="w"> </span><span class="n">générer</span><span class="w"> </span><span class="n">l</span><span class="err">'</span><span class="n">exception</span>
+<a id="__codelineno-21-4" name="__codelineno-21-4"></a><span class="p">}</span>
+<a id="__codelineno-21-5" name="__codelineno-21-5"></a><span class="k">catch</span><span class="w"> </span><span class="p">(</span><span class="n">Exception</span><span class="w"> </span><span class="n">e</span><span class="p">)</span>
+<a id="__codelineno-21-6" name="__codelineno-21-6"></a><span class="p">{</span>
+<a id="__codelineno-21-7" name="__codelineno-21-7"></a><span class="w">    </span><span class="n">traiter</span><span class="w"> </span><span class="n">l</span><span class="err">'</span><span class="n">exception</span><span class="w"> </span><span class="n">e</span>
+<a id="__codelineno-21-8" name="__codelineno-21-8"></a><span class="p">}</span>
+<a id="__codelineno-21-9" name="__codelineno-21-9"></a><span class="n">instruction</span><span class="w"> </span><span class="n">suivante</span>
 </code></pre></div></td></tr></table></div>
 <p>If the function does not throw an exception, execution proceeds to the next statement; otherwise, it proceeds to the body of the <em>[catch]</em> clause, then to the next statement. We will revisit exception handling in the section dedicated to it.</p>
 <p>The <em>[TryParse]</em> method (.NET 2.0) avoids the exception: it returns the boolean <em>[true]</em> if the conversion succeeds, <em>[false]</em> otherwise, and stores the resulting number in a variable passed using the keyword <em>[out]</em>. Starting with C# 7, this variable can be declared within the call itself: <strong><em>[int.TryParse(chaine, out var nombre)]</em></strong>. The <em>[out]</em> passing mode will be explained in the section on parameter passing. When incorrect input is expected—for example, from a keyboard—<em>[TryParse]</em> is preferable to <em>[Parse]</em>: an input error is not an exceptional situation.</p>
@@ -2370,27 +2370,27 @@
 <span class="normal"><a href="#__codelineno-23-18">18</a></span>
 <span class="normal"><a href="#__codelineno-23-19">19</a></span>
 <span class="normal"><a href="#__codelineno-23-20">20</a></span>
-<span class="normal"><a href="#__codelineno-23-21">21</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-23-1" name="__codelineno-23-1"></a><span class="o">&gt;</span><span class="w"> </span><span class="n">dotnet</span><span class="w"> </span><span class="n">run</span><span class="w"> </span><span class="n">bases</span><span class="o">-</span><span class="mi">07</span><span class="p">.</span><span class="n">cs</span>
-<a id="__codelineno-23-2" name="__codelineno-23-2"></a><span class="n">S</span><span class="o">=</span><span class="mi">10</span>
-<a id="__codelineno-23-3" name="__codelineno-23-3"></a><span class="n">S</span><span class="o">=</span><span class="mi">100000</span>
-<a id="__codelineno-23-4" name="__codelineno-23-4"></a><span class="n">S</span><span class="o">=</span><span class="mi">45</span><span class="p">,</span><span class="mi">78</span>
-<a id="__codelineno-23-5" name="__codelineno-23-5"></a><span class="n">S</span><span class="o">=-</span><span class="mi">14</span><span class="p">,</span><span class="mi">98</span>
-<a id="__codelineno-23-6" name="__codelineno-23-6"></a><span class="n">S</span><span class="o">=</span><span class="n">False</span>
-<a id="__codelineno-23-7" name="__codelineno-23-7"></a><span class="n">S</span><span class="o">=</span><span class="mi">10</span>
-<a id="__codelineno-23-8" name="__codelineno-23-8"></a><span class="n">S</span><span class="o">=</span><span class="n">Erreur</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="n">The</span><span class="w"> </span><span class="n">input</span><span class="w"> </span><span class="kt">string</span><span class="w"> </span><span class="err">'</span><span class="mf">10.67</span><span class="err">'</span><span class="w"> </span><span class="n">was</span><span class="w"> </span><span class="k">not</span><span class="w"> </span><span class="k">in</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="n">correct</span><span class="w"> </span><span class="n">format</span><span class="p">.</span>
-<a id="__codelineno-23-9" name="__codelineno-23-9"></a><span class="n">S</span><span class="o">=</span><span class="mi">100</span>
-<a id="__codelineno-23-10" name="__codelineno-23-10"></a><span class="n">S</span><span class="o">=</span><span class="n">Erreur</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="n">The</span><span class="w"> </span><span class="n">input</span><span class="w"> </span><span class="kt">string</span><span class="w"> </span><span class="err">'</span><span class="mf">10.675</span><span class="err">'</span><span class="w"> </span><span class="n">was</span><span class="w"> </span><span class="k">not</span><span class="w"> </span><span class="k">in</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="n">correct</span><span class="w"> </span><span class="n">format</span><span class="p">.</span>
-<a id="__codelineno-23-11" name="__codelineno-23-11"></a><span class="n">S</span><span class="o">=</span><span class="mi">100</span><span class="p">,</span><span class="mi">87</span>
-<a id="__codelineno-23-12" name="__codelineno-23-12"></a><span class="n">S</span><span class="o">=</span><span class="n">Erreur</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="n">The</span><span class="w"> </span><span class="n">input</span><span class="w"> </span><span class="kt">string</span><span class="w"> </span><span class="err">'</span><span class="n">abcd</span><span class="err">'</span><span class="w"> </span><span class="n">was</span><span class="w"> </span><span class="k">not</span><span class="w"> </span><span class="k">in</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="n">correct</span><span class="w"> </span><span class="n">format</span><span class="p">.</span>
-<a id="__codelineno-23-13" name="__codelineno-23-13"></a><span class="n">S</span><span class="o">=</span><span class="mi">100</span><span class="p">,</span><span class="mi">87</span>
-<a id="__codelineno-23-14" name="__codelineno-23-14"></a><span class="n">S</span><span class="o">=</span><span class="n">Erreur</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="n">The</span><span class="w"> </span><span class="n">input</span><span class="w"> </span><span class="kt">string</span><span class="w"> </span><span class="err">'</span><span class="n">abcd</span><span class="err">'</span><span class="w"> </span><span class="n">was</span><span class="w"> </span><span class="k">not</span><span class="w"> </span><span class="k">in</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="n">correct</span><span class="w"> </span><span class="n">format</span><span class="p">.</span>
-<a id="__codelineno-23-15" name="__codelineno-23-15"></a><span class="n">S</span><span class="o">=</span><span class="n">TryParse</span><span class="p">(</span><span class="s">"123"</span><span class="p">)</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="n">réussi</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="mi">123</span>
-<a id="__codelineno-23-16" name="__codelineno-23-16"></a><span class="n">S</span><span class="o">=</span><span class="n">TryParse</span><span class="p">(</span><span class="s">"12x"</span><span class="p">)</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="n">échoué</span><span class="p">,</span><span class="w"> </span><span class="n">i3</span><span class="o">=</span><span class="mi">0</span>
-<a id="__codelineno-23-17" name="__codelineno-23-17"></a><span class="n">S</span><span class="o">=</span><span class="n">Culture</span><span class="w"> </span><span class="n">courante</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="n">fr</span><span class="o">-</span><span class="n">FR</span>
-<a id="__codelineno-23-18" name="__codelineno-23-18"></a><span class="n">S</span><span class="o">=</span><span class="n">Erreur</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="n">The</span><span class="w"> </span><span class="n">input</span><span class="w"> </span><span class="kt">string</span><span class="w"> </span><span class="err">'</span><span class="mf">100.87</span><span class="err">'</span><span class="w"> </span><span class="n">was</span><span class="w"> </span><span class="k">not</span><span class="w"> </span><span class="k">in</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="n">correct</span><span class="w"> </span><span class="n">format</span><span class="p">.</span>
-<a id="__codelineno-23-19" name="__codelineno-23-19"></a><span class="n">S</span><span class="o">=</span><span class="mi">100</span><span class="p">,</span><span class="mi">87</span>
-<a id="__codelineno-23-20" name="__codelineno-23-20"></a><span class="n">S</span><span class="o">=</span><span class="mf">100.87</span>
-<a id="__codelineno-23-21" name="__codelineno-23-21"></a><span class="n">S</span><span class="o">=</span><span class="n">pi</span><span class="o">=</span><span class="mi">3</span><span class="p">,</span><span class="mi">14</span>
+<span class="normal"><a href="#__codelineno-23-21">21</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-23-1" name="__codelineno-23-1"></a>&gt; dotnet run bases-07.cs
+<a id="__codelineno-23-2" name="__codelineno-23-2"></a>S=10
+<a id="__codelineno-23-3" name="__codelineno-23-3"></a>S=100000
+<a id="__codelineno-23-4" name="__codelineno-23-4"></a>S=45,78
+<a id="__codelineno-23-5" name="__codelineno-23-5"></a>S=-14,98
+<a id="__codelineno-23-6" name="__codelineno-23-6"></a>S=False
+<a id="__codelineno-23-7" name="__codelineno-23-7"></a>S=10
+<a id="__codelineno-23-8" name="__codelineno-23-8"></a>S=Erreur : The input string '10.67' was not in a correct format.
+<a id="__codelineno-23-9" name="__codelineno-23-9"></a>S=100
+<a id="__codelineno-23-10" name="__codelineno-23-10"></a>S=Erreur : The input string '10.675' was not in a correct format.
+<a id="__codelineno-23-11" name="__codelineno-23-11"></a>S=100,87
+<a id="__codelineno-23-12" name="__codelineno-23-12"></a>S=Erreur : The input string 'abcd' was not in a correct format.
+<a id="__codelineno-23-13" name="__codelineno-23-13"></a>S=100,87
+<a id="__codelineno-23-14" name="__codelineno-23-14"></a>S=Erreur : The input string 'abcd' was not in a correct format.
+<a id="__codelineno-23-15" name="__codelineno-23-15"></a>S=TryParse("123") a réussi : 123
+<a id="__codelineno-23-16" name="__codelineno-23-16"></a>S=TryParse("12x") a échoué, i3=0
+<a id="__codelineno-23-17" name="__codelineno-23-17"></a>S=Culture courante : fr-FR
+<a id="__codelineno-23-18" name="__codelineno-23-18"></a>S=Erreur : The input string '100.87' was not in a correct format.
+<a id="__codelineno-23-19" name="__codelineno-23-19"></a>S=100,87
+<a id="__codelineno-23-20" name="__codelineno-23-20"></a>S=100.87
+<a id="__codelineno-23-21" name="__codelineno-23-21"></a>S=pi=3,14
 </code></pre></div></td></tr></table></div>
 <p>Comments:</p>
 <ul>
@@ -2411,10 +2411,10 @@
 <p>The 2008 course stated that real numbers in string form must use a comma: this is true only in the French culture. A program that reads numbers must always know in which culture they were written.</p>
 <h3 id="336-data-arrays">3.3.6. <span style="color: #1f4d78">Data Arrays</span></h3>
 <p>A C# array is an object that allows data of the same type to be grouped under a single identifier. It is declared as follows:</p>
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-24-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-24-1" name="__codelineno-24-1"></a>Type[] tableau = new Type[n];
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-24-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-24-1" name="__codelineno-24-1"></a><span class="n">Type</span><span class="p">[]</span><span class="w"> </span><span class="n">tableau</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Type</span><span class="p">[</span><span class="n">n</span><span class="p">];</span>
 </code></pre></div></td></tr></table></div>
 <p><em>[n]</em> is the number of data elements the array can contain. The syntax <em>[tableau[i]]</em> refers to data element number i, where i belongs to the range [0, n-1]. Any reference to data item <em>[tableau[i]]</em> where i is not in the range [0, n-1] causes an exception. Upon creation, each element of the array is assigned the default value for its type: 0 for numbers, <em>[false]</em> for booleans, and <em>[null]</em> for reference types. An array can be initialized at the same time it is declared:</p>
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-25-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-25-1" name="__codelineno-25-1"></a>int[] entiers = new int[] { 0, 10, 20, 30 };
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-25-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-25-1" name="__codelineno-25-1"></a><span class="kt">int</span><span class="p">[]</span><span class="w"> </span><span class="n">entiers</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="kt">int</span><span class="p">[]</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">10</span><span class="p">,</span><span class="w"> </span><span class="mi">20</span><span class="p">,</span><span class="w"> </span><span class="mi">30</span><span class="w"> </span><span class="p">};</span>
 </code></pre></div></td></tr></table></div>
 <p>or, more simply:</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-26-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-26-1" name="__codelineno-26-1"></a>int[] entiers = { 0, 10, 20, 30 };
@@ -2424,14 +2424,14 @@
 </code></pre></div></td></tr></table></div>
 <p>We will use this last form from now on. Arrays have a property <em>[Length],</em> which represents the number of elements they contain.</p>
 <p>A two-dimensional array is declared as follows:</p>
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-28-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-28-1" name="__codelineno-28-1"></a>Type[,] tableau = new Type[n, m];
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-28-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-28-1" name="__codelineno-28-1"></a><span class="n">Type</span><span class="p">[,]</span><span class="w"> </span><span class="n">tableau</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Type</span><span class="p">[</span><span class="n">n</span><span class="p">,</span><span class="w"> </span><span class="n">m</span><span class="p">];</span>
 </code></pre></div></td></tr></table></div>
 <p>where <em>[n]</em> is the number of rows and <em>[m]</em> is the number of columns. The syntax <em>[tableau[i, j]]</em> refers to element j in row i. The two-dimensional array can also be initialized at the same time it is declared:</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-29-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-29-1" name="__codelineno-29-1"></a>double[,] reels = { { 0.5, 1.7 }, { 8.4, -6 } };
 </code></pre></div></td></tr></table></div>
 <p>The number of elements in each dimension is obtained using the method <em>[GetLength(i)]</em>, where i=0 represents the dimension corresponding to the first index, i=1 represents the dimension corresponding to the second index, and so on. The number of dimensions is obtained using the property <em>[Rank]</em>, and the total number of elements using the property <em>[Length]</em>.</p>
 <p>An array of arrays (also known as a <strong>staircase</strong> array) is declared as follows:</p>
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-30-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-30-1" name="__codelineno-30-1"></a>Type[][] tableau = new Type[n][];
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-30-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-30-1" name="__codelineno-30-1"></a><span class="n">Type</span><span class="p">[][]</span><span class="w"> </span><span class="n">tableau</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Type</span><span class="p">[</span><span class="n">n</span><span class="p">][];</span>
 </code></pre></div></td></tr></table></div>
 <p>The declaration above creates an array of n elements. Each element, <em>[tableau[i]],</em> is a one-dimensional array reference. These references are not initialized by the declaration above; they have the value <em>[null]</em>. Unlike a two-dimensional array, each row can have a different length.</p>
 <p>C# 8 introduced two convenient notations:</p>
@@ -2500,67 +2500,67 @@
 <span class="normal"><a href="#__codelineno-31-58">58</a></span>
 <span class="normal"><a href="#__codelineno-31-59">59</a></span>
 <span class="normal"><a href="#__codelineno-31-60">60</a></span>
-<span class="normal"><a href="#__codelineno-31-61">61</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-31-1" name="__codelineno-31-1"></a><span class="o">//</span> <span class="n">arrays</span>
-<a id="__codelineno-31-2" name="__codelineno-31-2"></a><span class="o">//</span> <span class="n">a</span> <span class="mi">1</span><span class="o">-</span><span class="n">dimensional</span> <span class="n">initialized</span> <span class="n">array</span>
-<a id="__codelineno-31-3" name="__codelineno-31-3"></a><span class="nb">int</span><span class="p">[]</span> <span class="n">entiers</span> <span class="o">=</span> <span class="n">new</span> <span class="nb">int</span><span class="p">[]</span> <span class="p">{</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">20</span><span class="p">,</span> <span class="mi">30</span> <span class="p">};</span>
-<a id="__codelineno-31-4" name="__codelineno-31-4"></a><span class="k">for</span> <span class="p">(</span><span class="nb">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">entiers</span><span class="o">.</span><span class="n">Length</span><span class="p">;</span> <span class="n">i</span><span class="o">++</span><span class="p">)</span>
+<span class="normal"><a href="#__codelineno-31-61">61</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-31-1" name="__codelineno-31-1"></a><span class="c1">// arrays</span>
+<a id="__codelineno-31-2" name="__codelineno-31-2"></a><span class="c1">// a 1-dimensional initialized array</span>
+<a id="__codelineno-31-3" name="__codelineno-31-3"></a><span class="kt">int</span><span class="p">[]</span><span class="w"> </span><span class="n">entiers</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="kt">int</span><span class="p">[]</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">10</span><span class="p">,</span><span class="w"> </span><span class="mi">20</span><span class="p">,</span><span class="w"> </span><span class="mi">30</span><span class="w"> </span><span class="p">};</span>
+<a id="__codelineno-31-4" name="__codelineno-31-4"></a><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">entiers</span><span class="p">.</span><span class="n">Length</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="o">++</span><span class="p">)</span>
 <a id="__codelineno-31-5" name="__codelineno-31-5"></a><span class="p">{</span>
-<a id="__codelineno-31-6" name="__codelineno-31-6"></a>    <span class="n">Console</span><span class="o">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="err">$</span><span class="s2">"entiers[</span><span class="si">{i}</span><span class="s2">]=</span><span class="si">{entiers[i]}</span><span class="s2">"</span><span class="p">);</span>
+<a id="__codelineno-31-6" name="__codelineno-31-6"></a><span class="w">    </span><span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="s">$"entiers[{i}]={entiers[i]}"</span><span class="p">);</span>
 <a id="__codelineno-31-7" name="__codelineno-31-7"></a><span class="p">}</span>
 <a id="__codelineno-31-8" name="__codelineno-31-8"></a>
-<a id="__codelineno-31-9" name="__codelineno-31-9"></a><span class="o">//</span> <span class="n">an</span> <span class="n">initialized</span> <span class="n">two</span><span class="o">-</span><span class="n">dimensional</span> <span class="n">array</span>
-<a id="__codelineno-31-10" name="__codelineno-31-10"></a><span class="n">double</span><span class="p">[,]</span> <span class="n">reels</span> <span class="o">=</span> <span class="p">{</span> <span class="p">{</span> <span class="mf">0.5</span><span class="p">,</span> <span class="mf">1.7</span> <span class="p">},</span> <span class="p">{</span> <span class="mf">8.4</span><span class="p">,</span> <span class="o">-</span><span class="mi">6</span> <span class="p">}</span> <span class="p">};</span>
-<a id="__codelineno-31-11" name="__codelineno-31-11"></a><span class="k">for</span> <span class="p">(</span><span class="nb">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">reels</span><span class="o">.</span><span class="n">GetLength</span><span class="p">(</span><span class="mi">0</span><span class="p">);</span> <span class="n">i</span><span class="o">++</span><span class="p">)</span>
+<a id="__codelineno-31-9" name="__codelineno-31-9"></a><span class="c1">// an initialized two-dimensional array</span>
+<a id="__codelineno-31-10" name="__codelineno-31-10"></a><span class="kt">double</span><span class="p">[,]</span><span class="w"> </span><span class="n">reels</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="mf">0.5</span><span class="p">,</span><span class="w"> </span><span class="mf">1.7</span><span class="w"> </span><span class="p">},</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="mf">8.4</span><span class="p">,</span><span class="w"> </span><span class="o">-</span><span class="mi">6</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="p">};</span>
+<a id="__codelineno-31-11" name="__codelineno-31-11"></a><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">reels</span><span class="p">.</span><span class="n">GetLength</span><span class="p">(</span><span class="mi">0</span><span class="p">);</span><span class="w"> </span><span class="n">i</span><span class="o">++</span><span class="p">)</span>
 <a id="__codelineno-31-12" name="__codelineno-31-12"></a><span class="p">{</span>
-<a id="__codelineno-31-13" name="__codelineno-31-13"></a>    <span class="k">for</span> <span class="p">(</span><span class="nb">int</span> <span class="n">j</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">j</span> <span class="o">&lt;</span> <span class="n">reels</span><span class="o">.</span><span class="n">GetLength</span><span class="p">(</span><span class="mi">1</span><span class="p">);</span> <span class="n">j</span><span class="o">++</span><span class="p">)</span>
-<a id="__codelineno-31-14" name="__codelineno-31-14"></a>    <span class="p">{</span>
-<a id="__codelineno-31-15" name="__codelineno-31-15"></a>        <span class="n">Console</span><span class="o">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="err">$</span><span class="s2">"reels[</span><span class="si">{i}</span><span class="s2">,</span><span class="si">{j}</span><span class="s2">]=</span><span class="si">{reels[i, j]}</span><span class="s2">"</span><span class="p">);</span>
-<a id="__codelineno-31-16" name="__codelineno-31-16"></a>    <span class="p">}</span>
+<a id="__codelineno-31-13" name="__codelineno-31-13"></a><span class="w">    </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">j</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">j</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">reels</span><span class="p">.</span><span class="n">GetLength</span><span class="p">(</span><span class="mi">1</span><span class="p">);</span><span class="w"> </span><span class="n">j</span><span class="o">++</span><span class="p">)</span>
+<a id="__codelineno-31-14" name="__codelineno-31-14"></a><span class="w">    </span><span class="p">{</span>
+<a id="__codelineno-31-15" name="__codelineno-31-15"></a><span class="w">        </span><span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="s">$"reels[{i},{j}]={reels[i, j]}"</span><span class="p">);</span>
+<a id="__codelineno-31-16" name="__codelineno-31-16"></a><span class="w">    </span><span class="p">}</span>
 <a id="__codelineno-31-17" name="__codelineno-31-17"></a><span class="p">}</span>
-<a id="__codelineno-31-18" name="__codelineno-31-18"></a><span class="n">Console</span><span class="o">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="err">$</span><span class="s2">"reels : Rank=</span><span class="si">{reels.Rank}</span><span class="s2">, Length=</span><span class="si">{reels.Length}</span><span class="s2">"</span><span class="p">);</span>
+<a id="__codelineno-31-18" name="__codelineno-31-18"></a><span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="s">$"reels : Rank={reels.Rank}, Length={reels.Length}"</span><span class="p">);</span>
 <a id="__codelineno-31-19" name="__codelineno-31-19"></a>
-<a id="__codelineno-31-20" name="__codelineno-31-20"></a><span class="o">//</span> <span class="n">an</span> <span class="n">array</span> <span class="n">of</span> <span class="n">arrays</span> <span class="p">(</span><span class="n">nested</span> <span class="n">array</span><span class="p">)</span>
-<a id="__codelineno-31-21" name="__codelineno-31-21"></a><span class="n">string</span><span class="p">[][]</span> <span class="n">noms</span> <span class="o">=</span> <span class="n">new</span> <span class="n">string</span><span class="p">[</span><span class="mi">3</span><span class="p">][];</span>
-<a id="__codelineno-31-22" name="__codelineno-31-22"></a><span class="k">for</span> <span class="p">(</span><span class="nb">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">noms</span><span class="o">.</span><span class="n">Length</span><span class="p">;</span> <span class="n">i</span><span class="o">++</span><span class="p">)</span>
+<a id="__codelineno-31-20" name="__codelineno-31-20"></a><span class="c1">// an array of arrays (nested array)</span>
+<a id="__codelineno-31-21" name="__codelineno-31-21"></a><span class="kt">string</span><span class="p">[][]</span><span class="w"> </span><span class="n">noms</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="kt">string</span><span class="p">[</span><span class="mi">3</span><span class="p">][];</span>
+<a id="__codelineno-31-22" name="__codelineno-31-22"></a><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">noms</span><span class="p">.</span><span class="n">Length</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="o">++</span><span class="p">)</span>
 <a id="__codelineno-31-23" name="__codelineno-31-23"></a><span class="p">{</span>
-<a id="__codelineno-31-24" name="__codelineno-31-24"></a>    <span class="n">noms</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="n">new</span> <span class="n">string</span><span class="p">[</span><span class="n">i</span> <span class="o">+</span> <span class="mi">1</span><span class="p">];</span>
+<a id="__codelineno-31-24" name="__codelineno-31-24"></a><span class="w">    </span><span class="n">noms</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="kt">string</span><span class="p">[</span><span class="n">i</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mi">1</span><span class="p">];</span>
 <a id="__codelineno-31-25" name="__codelineno-31-25"></a><span class="p">}</span>
-<a id="__codelineno-31-26" name="__codelineno-31-26"></a><span class="o">//</span> <span class="n">initialization</span>
-<a id="__codelineno-31-27" name="__codelineno-31-27"></a><span class="k">for</span> <span class="p">(</span><span class="nb">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">noms</span><span class="o">.</span><span class="n">Length</span><span class="p">;</span> <span class="n">i</span><span class="o">++</span><span class="p">)</span>
+<a id="__codelineno-31-26" name="__codelineno-31-26"></a><span class="c1">// initialization</span>
+<a id="__codelineno-31-27" name="__codelineno-31-27"></a><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">noms</span><span class="p">.</span><span class="n">Length</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="o">++</span><span class="p">)</span>
 <a id="__codelineno-31-28" name="__codelineno-31-28"></a><span class="p">{</span>
-<a id="__codelineno-31-29" name="__codelineno-31-29"></a>    <span class="k">for</span> <span class="p">(</span><span class="nb">int</span> <span class="n">j</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">j</span> <span class="o">&lt;</span> <span class="n">noms</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">.</span><span class="n">Length</span><span class="p">;</span> <span class="n">j</span><span class="o">++</span><span class="p">)</span>
-<a id="__codelineno-31-30" name="__codelineno-31-30"></a>    <span class="p">{</span>
-<a id="__codelineno-31-31" name="__codelineno-31-31"></a>        <span class="n">noms</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="n">j</span><span class="p">]</span> <span class="o">=</span> <span class="s2">"nom"</span> <span class="o">+</span> <span class="n">i</span> <span class="o">+</span> <span class="n">j</span><span class="p">;</span>
-<a id="__codelineno-31-32" name="__codelineno-31-32"></a>    <span class="p">}</span>
+<a id="__codelineno-31-29" name="__codelineno-31-29"></a><span class="w">    </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">j</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">j</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">noms</span><span class="p">[</span><span class="n">i</span><span class="p">].</span><span class="n">Length</span><span class="p">;</span><span class="w"> </span><span class="n">j</span><span class="o">++</span><span class="p">)</span>
+<a id="__codelineno-31-30" name="__codelineno-31-30"></a><span class="w">    </span><span class="p">{</span>
+<a id="__codelineno-31-31" name="__codelineno-31-31"></a><span class="w">        </span><span class="n">noms</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="n">j</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">"nom"</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">j</span><span class="p">;</span>
+<a id="__codelineno-31-32" name="__codelineno-31-32"></a><span class="w">    </span><span class="p">}</span>
 <a id="__codelineno-31-33" name="__codelineno-31-33"></a><span class="p">}</span>
-<a id="__codelineno-31-34" name="__codelineno-31-34"></a><span class="o">//</span> <span class="n">display</span>
-<a id="__codelineno-31-35" name="__codelineno-31-35"></a><span class="k">for</span> <span class="p">(</span><span class="nb">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">noms</span><span class="o">.</span><span class="n">Length</span><span class="p">;</span> <span class="n">i</span><span class="o">++</span><span class="p">)</span>
+<a id="__codelineno-31-34" name="__codelineno-31-34"></a><span class="c1">// display</span>
+<a id="__codelineno-31-35" name="__codelineno-31-35"></a><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">noms</span><span class="p">.</span><span class="n">Length</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="o">++</span><span class="p">)</span>
 <a id="__codelineno-31-36" name="__codelineno-31-36"></a><span class="p">{</span>
-<a id="__codelineno-31-37" name="__codelineno-31-37"></a>    <span class="k">for</span> <span class="p">(</span><span class="nb">int</span> <span class="n">j</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">j</span> <span class="o">&lt;</span> <span class="n">noms</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">.</span><span class="n">Length</span><span class="p">;</span> <span class="n">j</span><span class="o">++</span><span class="p">)</span>
-<a id="__codelineno-31-38" name="__codelineno-31-38"></a>    <span class="p">{</span>
-<a id="__codelineno-31-39" name="__codelineno-31-39"></a>        <span class="n">Console</span><span class="o">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="err">$</span><span class="s2">"noms[</span><span class="si">{i}</span><span class="s2">][</span><span class="si">{j}</span><span class="s2">]=</span><span class="si">{noms[i][j]}</span><span class="s2">"</span><span class="p">);</span>
-<a id="__codelineno-31-40" name="__codelineno-31-40"></a>    <span class="p">}</span>
+<a id="__codelineno-31-37" name="__codelineno-31-37"></a><span class="w">    </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">j</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">j</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">noms</span><span class="p">[</span><span class="n">i</span><span class="p">].</span><span class="n">Length</span><span class="p">;</span><span class="w"> </span><span class="n">j</span><span class="o">++</span><span class="p">)</span>
+<a id="__codelineno-31-38" name="__codelineno-31-38"></a><span class="w">    </span><span class="p">{</span>
+<a id="__codelineno-31-39" name="__codelineno-31-39"></a><span class="w">        </span><span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="s">$"noms[{i}][{j}]={noms[i][j]}"</span><span class="p">);</span>
+<a id="__codelineno-31-40" name="__codelineno-31-40"></a><span class="w">    </span><span class="p">}</span>
 <a id="__codelineno-31-41" name="__codelineno-31-41"></a><span class="p">}</span>
 <a id="__codelineno-31-42" name="__codelineno-31-42"></a>
-<a id="__codelineno-31-43" name="__codelineno-31-43"></a><span class="o">//</span> <span class="n">an</span> <span class="n">array</span> <span class="n">created</span> <span class="n">without</span> <span class="n">initial</span> <span class="n">values</span><span class="p">:</span> <span class="n">elements</span> <span class="nb">set</span> <span class="n">to</span> <span class="n">the</span> <span class="nb">type</span><span class="err">’</span><span class="n">s</span> <span class="n">default</span> <span class="n">value</span>
-<a id="__codelineno-31-44" name="__codelineno-31-44"></a><span class="nb">bool</span><span class="p">[]</span> <span class="n">drapeaux</span> <span class="o">=</span> <span class="n">new</span> <span class="nb">bool</span><span class="p">[</span><span class="mi">3</span><span class="p">];</span>
-<a id="__codelineno-31-45" name="__codelineno-31-45"></a><span class="n">string</span><span class="err">?</span><span class="p">[]</span> <span class="n">chaines</span> <span class="o">=</span> <span class="n">new</span> <span class="n">string</span><span class="err">?</span><span class="p">[</span><span class="mi">2</span><span class="p">];</span>
-<a id="__codelineno-31-46" name="__codelineno-31-46"></a><span class="n">Console</span><span class="o">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="err">$</span><span class="s2">"drapeaux[0]=</span><span class="si">{drapeaux[0]}</span><span class="s2">, chaines[0] est null : {chaines[0] == null}"</span><span class="p">);</span>
+<a id="__codelineno-31-43" name="__codelineno-31-43"></a><span class="c1">// an array created without initial values: elements set to the type’s default value</span>
+<a id="__codelineno-31-44" name="__codelineno-31-44"></a><span class="kt">bool</span><span class="p">[]</span><span class="w"> </span><span class="n">drapeaux</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="kt">bool</span><span class="p">[</span><span class="mi">3</span><span class="p">];</span>
+<a id="__codelineno-31-45" name="__codelineno-31-45"></a><span class="kt">string?</span><span class="p">[]</span><span class="w"> </span><span class="n">chaines</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="kt">string?</span><span class="p">[</span><span class="mi">2</span><span class="p">];</span>
+<a id="__codelineno-31-46" name="__codelineno-31-46"></a><span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="s">$"drapeaux[0]={drapeaux[0]}, chaines[0] est null : {chaines[0] == null}"</span><span class="p">);</span>
 <a id="__codelineno-31-47" name="__codelineno-31-47"></a>
-<a id="__codelineno-31-48" name="__codelineno-31-48"></a><span class="o">//</span> <span class="n">collection</span> <span class="n">expression</span> <span class="p">(</span><span class="n">C</span><span class="c1"># 12)</span>
-<a id="__codelineno-31-49" name="__codelineno-31-49"></a><span class="nb">int</span><span class="p">[]</span> <span class="n">valeurs</span> <span class="o">=</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">20</span><span class="p">,</span> <span class="mi">30</span><span class="p">,</span> <span class="mi">40</span><span class="p">];</span>
-<a id="__codelineno-31-50" name="__codelineno-31-50"></a><span class="o">//</span> <span class="n">string</span><span class="o">.</span><span class="n">Join</span> <span class="n">concatenates</span> <span class="n">the</span> <span class="n">elements</span> <span class="n">of</span> <span class="n">an</span> <span class="n">array</span> <span class="k">with</span> <span class="n">a</span> <span class="n">separator</span>
-<a id="__codelineno-31-51" name="__codelineno-31-51"></a><span class="n">Console</span><span class="o">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="err">$</span><span class="s2">"valeurs=[{string.Join("</span><span class="p">,</span> <span class="s2">", valeurs)}]"</span><span class="p">);</span>
-<a id="__codelineno-31-52" name="__codelineno-31-52"></a><span class="o">//</span> <span class="n">indexing</span> <span class="kn">from</span><span class="w"> </span><span class="nn">the</span> <span class="n">end</span> <span class="p">(</span><span class="n">C</span><span class="c1"># 8): ^1 refers to the last element</span>
-<a id="__codelineno-31-53" name="__codelineno-31-53"></a><span class="n">Console</span><span class="o">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="err">$</span><span class="s2">"valeurs[^1]=</span><span class="si">{valeurs[^1]}</span><span class="s2">, valeurs[^2]=</span><span class="si">{valeurs[^2]}</span><span class="s2">"</span><span class="p">);</span>
-<a id="__codelineno-31-54" name="__codelineno-31-54"></a><span class="o">//</span> <span class="nb">range</span> <span class="p">(</span><span class="n">C</span><span class="c1"># 8): elements at indices 1 and 2 (the end index is excluded)</span>
-<a id="__codelineno-31-55" name="__codelineno-31-55"></a><span class="nb">int</span><span class="p">[]</span> <span class="n">extrait</span> <span class="o">=</span> <span class="n">valeurs</span><span class="p">[</span><span class="mf">1..3</span><span class="p">];</span>
-<a id="__codelineno-31-56" name="__codelineno-31-56"></a><span class="n">Console</span><span class="o">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="err">$</span><span class="s2">"valeurs[1..3]=[{string.Join("</span><span class="p">,</span> <span class="s2">", extrait)}]"</span><span class="p">);</span>
-<a id="__codelineno-31-57" name="__codelineno-31-57"></a><span class="n">Console</span><span class="o">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="err">$</span><span class="s2">"valeurs[2..]=[{string.Join("</span><span class="p">,</span> <span class="s2">", valeurs[2..])}]"</span><span class="p">);</span>
-<a id="__codelineno-31-58" name="__codelineno-31-58"></a><span class="n">Console</span><span class="o">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="err">$</span><span class="s2">"valeurs[..^1]=[{string.Join("</span><span class="p">,</span> <span class="s2">", valeurs[..^1])}]"</span><span class="p">);</span>
-<a id="__codelineno-31-59" name="__codelineno-31-59"></a><span class="o">//</span> <span class="n">The</span> <span class="n">extract</span> <span class="ow">is</span> <span class="n">a</span> <span class="n">copy</span><span class="p">:</span> <span class="n">the</span> <span class="n">original</span> <span class="n">array</span> <span class="ow">is</span> <span class="ow">not</span> <span class="n">modified</span>
-<a id="__codelineno-31-60" name="__codelineno-31-60"></a><span class="n">extrait</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">=</span> <span class="mi">100</span><span class="p">;</span>
-<a id="__codelineno-31-61" name="__codelineno-31-61"></a><span class="n">Console</span><span class="o">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="err">$</span><span class="s2">"extrait[0]=</span><span class="si">{extrait[0]}</span><span class="s2">, valeurs[1]=</span><span class="si">{valeurs[1]}</span><span class="s2">"</span><span class="p">);</span>
+<a id="__codelineno-31-48" name="__codelineno-31-48"></a><span class="c1">// collection expression (C# 12)</span>
+<a id="__codelineno-31-49" name="__codelineno-31-49"></a><span class="kt">int</span><span class="p">[]</span><span class="w"> </span><span class="n">valeurs</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[</span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">10</span><span class="p">,</span><span class="w"> </span><span class="mi">20</span><span class="p">,</span><span class="w"> </span><span class="mi">30</span><span class="p">,</span><span class="w"> </span><span class="mi">40</span><span class="p">];</span>
+<a id="__codelineno-31-50" name="__codelineno-31-50"></a><span class="c1">// string.Join concatenates the elements of an array with a separator</span>
+<a id="__codelineno-31-51" name="__codelineno-31-51"></a><span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="s">$"valeurs=[{string.Join("</span><span class="p">,</span><span class="w"> </span><span class="s">", valeurs)}]"</span><span class="p">);</span>
+<a id="__codelineno-31-52" name="__codelineno-31-52"></a><span class="c1">// indexing from the end (C# 8): ^1 refers to the last element</span>
+<a id="__codelineno-31-53" name="__codelineno-31-53"></a><span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="s">$"valeurs[^1]={valeurs[^1]}, valeurs[^2]={valeurs[^2]}"</span><span class="p">);</span>
+<a id="__codelineno-31-54" name="__codelineno-31-54"></a><span class="c1">// range (C# 8): elements at indices 1 and 2 (the end index is excluded)</span>
+<a id="__codelineno-31-55" name="__codelineno-31-55"></a><span class="kt">int</span><span class="p">[]</span><span class="w"> </span><span class="n">extrait</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">valeurs</span><span class="p">[</span><span class="mi">1</span><span class="p">.</span><span class="mf">.3</span><span class="p">];</span>
+<a id="__codelineno-31-56" name="__codelineno-31-56"></a><span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="s">$"valeurs[1..3]=[{string.Join("</span><span class="p">,</span><span class="w"> </span><span class="s">", extrait)}]"</span><span class="p">);</span>
+<a id="__codelineno-31-57" name="__codelineno-31-57"></a><span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="s">$"valeurs[2..]=[{string.Join("</span><span class="p">,</span><span class="w"> </span><span class="s">", valeurs[2..])}]"</span><span class="p">);</span>
+<a id="__codelineno-31-58" name="__codelineno-31-58"></a><span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="s">$"valeurs[..^1]=[{string.Join("</span><span class="p">,</span><span class="w"> </span><span class="s">", valeurs[..^1])}]"</span><span class="p">);</span>
+<a id="__codelineno-31-59" name="__codelineno-31-59"></a><span class="c1">// The extract is a copy: the original array is not modified</span>
+<a id="__codelineno-31-60" name="__codelineno-31-60"></a><span class="n">extrait</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">100</span><span class="p">;</span>
+<a id="__codelineno-31-61" name="__codelineno-31-61"></a><span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="s">$"extrait[0]={extrait[0]}, valeurs[1]={valeurs[1]}"</span><span class="p">);</span>
 </code></pre></div></td></tr></table></div>
 <p>Results:</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-32-1"> 1</a></span>
@@ -2655,10 +2655,10 @@
 <p>The streams <em>[Out]</em> and <em>[Error]</em> can be redirected to files at runtime, as we will see shortly.</p>
 <h3 id="342-reading-data-entered-via-the-keyboard">3.4.2. <span style="color: #1f4d78">Reading Data Entered via the Keyboard</span></h3>
 <p>The data stream from the keyboard is represented by the object <em>[Console.In]</em> of type <em>[TextReader]</em>. This object type allows you to read a line of text using the <em>[ReadLine]</em> method:</p>
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-34-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-34-1" name="__codelineno-34-1"></a>string? ligne = Console.In.ReadLine();
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-34-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-34-1" name="__codelineno-34-1"></a><span class="kt">string?</span><span class="w"> </span><span class="n">ligne</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Console</span><span class="p">.</span><span class="n">In</span><span class="p">.</span><span class="n">ReadLine</span><span class="p">();</span>
 </code></pre></div></td></tr></table></div>
 <p>The <em>[Console]</em> class provides a method, <em>[ReadLine], which</em> is associated by default with the <em>[In]</em> stream. Therefore, you can write:</p>
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-35-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-35-1" name="__codelineno-35-1"></a>string? ligne = Console.ReadLine();
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-35-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-35-1" name="__codelineno-35-1"></a><span class="kt">string?</span><span class="w"> </span><span class="n">ligne</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Console</span><span class="p">.</span><span class="n">ReadLine</span><span class="p">();</span>
 </code></pre></div></td></tr></table></div>
 <p>The line typed on the keyboard, without the end-of-line character, is stored in the variable <em>[ligne]</em> and can then be processed by the program. As we have seen, <em>[ReadLine]</em> returns <em>[null]</em> when the input stream is exhausted: this is why the variable is of type <em>[string?]</em>. The stream <em>[In]</em> can be redirected to a file, just like the streams <em>[Out]</em> and <em>[Error]</em>.</p>
 <h3 id="343-example-of-inputoutput">3.4.3. <span style="color: #1f4d78">Example of Input/Output</span></h3>
@@ -2738,13 +2738,13 @@
 <span class="normal"><a href="#__codelineno-38-4">4</a></span>
 <span class="normal"><a href="#__codelineno-38-5">5</a></span>
 <span class="normal"><a href="#__codelineno-38-6">6</a></span>
-<span class="normal"><a href="#__codelineno-38-7">7</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-38-1" name="__codelineno-38-1"></a><span class="o">//</span> <span class="n">redirecting</span> <span class="nb">input</span><span class="o">/</span><span class="n">output</span> <span class="n">streams</span>
-<a id="__codelineno-38-2" name="__codelineno-38-2"></a><span class="o">//</span> <span class="n">read</span> <span class="kn">from</span><span class="w"> </span><span class="nn">the</span> <span class="n">In</span> <span class="n">stream</span>
-<a id="__codelineno-38-3" name="__codelineno-38-3"></a><span class="n">string</span><span class="err">?</span> <span class="n">data</span> <span class="o">=</span> <span class="n">Console</span><span class="o">.</span><span class="n">In</span><span class="o">.</span><span class="n">ReadLine</span><span class="p">();</span>
-<a id="__codelineno-38-4" name="__codelineno-38-4"></a><span class="o">//</span> <span class="n">Write</span> <span class="n">to</span> <span class="n">the</span> <span class="n">Out</span> <span class="n">stream</span>
-<a id="__codelineno-38-5" name="__codelineno-38-5"></a><span class="n">Console</span><span class="o">.</span><span class="n">Out</span><span class="o">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="s2">"écriture dans flux Out : "</span> <span class="o">+</span> <span class="n">data</span><span class="p">);</span>
-<a id="__codelineno-38-6" name="__codelineno-38-6"></a><span class="o">//</span> <span class="n">writing</span> <span class="n">to</span> <span class="n">the</span> <span class="n">Error</span> <span class="n">stream</span>
-<a id="__codelineno-38-7" name="__codelineno-38-7"></a><span class="n">Console</span><span class="o">.</span><span class="n">Error</span><span class="o">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="s2">"écriture dans flux Error : "</span> <span class="o">+</span> <span class="n">data</span><span class="p">);</span>
+<span class="normal"><a href="#__codelineno-38-7">7</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-38-1" name="__codelineno-38-1"></a><span class="c1">// redirecting input/output streams</span>
+<a id="__codelineno-38-2" name="__codelineno-38-2"></a><span class="c1">// read from the In stream</span>
+<a id="__codelineno-38-3" name="__codelineno-38-3"></a><span class="kt">string?</span><span class="w"> </span><span class="n">data</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Console</span><span class="p">.</span><span class="n">In</span><span class="p">.</span><span class="n">ReadLine</span><span class="p">();</span>
+<a id="__codelineno-38-4" name="__codelineno-38-4"></a><span class="c1">// Write to the Out stream</span>
+<a id="__codelineno-38-5" name="__codelineno-38-5"></a><span class="n">Console</span><span class="p">.</span><span class="n">Out</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="s">"écriture dans flux Out : "</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">data</span><span class="p">);</span>
+<a id="__codelineno-38-6" name="__codelineno-38-6"></a><span class="c1">// writing to the Error stream</span>
+<a id="__codelineno-38-7" name="__codelineno-38-7"></a><span class="n">Console</span><span class="p">.</span><span class="n">Error</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="s">"écriture dans flux Error : "</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">data</span><span class="p">);</span>
 </code></pre></div></td></tr></table></div>
 <p>The 2008 course generated an executable using Visual Studio and then ran it in a window named DOS. Today, the command <em>[dotnet run]</em> is sufficient: the redirects are applied to the launched program. Here is a session in a Linux terminal (bash):</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-39-1"> 1</a></span>
@@ -2799,7 +2799,7 @@
 <a id="__codelineno-40-4" name="__codelineno-40-4"></a>type out.txt
 <a id="__codelineno-40-5" name="__codelineno-40-5"></a>type err.txt
 <a id="__codelineno-40-6" name="__codelineno-40-6"></a>
-<a id="__codelineno-40-7" name="__codelineno-40-7"></a><span class="gh"># PowerShell</span>
+<a id="__codelineno-40-7" name="__codelineno-40-7"></a># PowerShell
 <a id="__codelineno-40-8" name="__codelineno-40-8"></a>"test" &gt; in.txt
 <a id="__codelineno-40-9" name="__codelineno-40-9"></a>Get-Content in.txt | dotnet run bases-10.cs &gt; out.txt 2&gt; err.txt
 <a id="__codelineno-40-10" name="__codelineno-40-10"></a>Get-Content out.txt
@@ -2829,8 +2829,8 @@
 
 <p>All these functions are defined in a class named <em>NET</em>. When using them, you must prefix them with the name of the class in which they are defined. Thus, you would write:</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-41-1">1</a></span>
-<span class="normal"><a href="#__codelineno-41-2">2</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-41-1" name="__codelineno-41-1"></a>double x, y = 4;
-<a id="__codelineno-41-2" name="__codelineno-41-2"></a>x = Math.Sqrt(y);
+<span class="normal"><a href="#__codelineno-41-2">2</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-41-1" name="__codelineno-41-1"></a><span class="kt">double</span><span class="w"> </span><span class="n">x</span><span class="p">,</span><span class="w"> </span><span class="n">y</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">4</span><span class="p">;</span>
+<a id="__codelineno-41-2" name="__codelineno-41-2"></a><span class="n">x</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Math</span><span class="p">.</span><span class="n">Sqrt</span><span class="p">(</span><span class="n">y</span><span class="p">);</span>
 </code></pre></div></td></tr></table></div>
 <p>The 2008 course included the complete definition of the <em>[Math]</em> class here: Today, it can be found in the online documentation for .NET, <a href="https://learn.microsoft.com/dotnet/api/system.math"><u><span style="color: #0563c1">learn.microsoft.com/dotnet/api/system.math</span></u></a>.</p>
 <p>The <em>[bases-11.cs]</em> program is as follows:</p>
@@ -2951,9 +2951,9 @@
 <p>The result of a relational expression is the Boolean <em>[false]</em> if the expression is false, and <em>[true]</em> otherwise.</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-45-1">1</a></span>
 <span class="normal"><a href="#__codelineno-45-2">2</a></span>
-<span class="normal"><a href="#__codelineno-45-3">3</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-45-1" name="__codelineno-45-1"></a>bool fin;
-<a id="__codelineno-45-2" name="__codelineno-45-2"></a>int x = 5;
-<a id="__codelineno-45-3" name="__codelineno-45-3"></a>fin = x &gt; 4;
+<span class="normal"><a href="#__codelineno-45-3">3</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-45-1" name="__codelineno-45-1"></a><span class="kt">bool</span><span class="w"> </span><span class="n">fin</span><span class="p">;</span>
+<a id="__codelineno-45-2" name="__codelineno-45-2"></a><span class="kt">int</span><span class="w"> </span><span class="n">x</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">5</span><span class="p">;</span>
+<a id="__codelineno-45-3" name="__codelineno-45-3"></a><span class="n">fin</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">x</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="mi">4</span><span class="p">;</span>
 </code></pre></div></td></tr></table></div>
 <p><strong>Comparing Two Characters</strong></p>
 <p>Let C1 and C2 be two characters. They can be compared using the operators &lt;, &lt;=, ==, !=, &gt;, &gt;=. In this case, it is their Unicode codes—which are numbers—that are compared. According to the Unicode order, the following relationships hold:</p>
@@ -3091,8 +3091,8 @@
 <li>||.</li>
 </ul>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-50-1">1</a></span>
-<span class="normal"><a href="#__codelineno-50-2">2</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-50-1" name="__codelineno-50-1"></a>double x = 3.5;
-<a id="__codelineno-50-2" name="__codelineno-50-2"></a>bool valide = x &gt; 2 &amp;&amp; x &lt; 4;
+<span class="normal"><a href="#__codelineno-50-2">2</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-50-1" name="__codelineno-50-1"></a><span class="kt">double</span><span class="w"> </span><span class="n">x</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">3.5</span><span class="p">;</span>
+<a id="__codelineno-50-2" name="__codelineno-50-2"></a><span class="kt">bool</span><span class="w"> </span><span class="n">valide</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">x</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="mi">2</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="n">x</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="mi">4</span><span class="p">;</span>
 </code></pre></div></td></tr></table></div>
 <p>Relational operators have higher precedence than the &amp;&amp; and || operators. These two operators evaluate their right-hand operand only if necessary: in <strong><em>[a &amp;&amp; b]</em></strong>, b is not evaluated if a is false; in <strong><em>[a || b]</em></strong>, b is not evaluated if a is true. This is called “short-circuit evaluation.” Therefore, it is safe to write <strong><em>[texte != null &amp;&amp; texte.Length &gt; 0]</em></strong>.</p>
 <h4 id="3456-bitwise-operations">3.4.5.6. <span style="color: #2e74b5">Bitwise Operations</span></h4>
@@ -3460,10 +3460,10 @@
 <h2 id="35-program-flow-control-statements">3.5. <span style="color: #2e74b5">Program Flow Control Statements</span></h2>
 <h3 id="351-stop">3.5.1. <span style="color: #1f4d78">Stop</span></h3>
 <p>The <em>[Exit]</em> method of the <em>[Environment]</em> class allows you to stop the execution of a program:</p>
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-58-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-58-1" name="__codelineno-58-1"></a>Environment.Exit(int status);
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-58-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-58-1" name="__codelineno-58-1"></a><span class="n">Environment</span><span class="p">.</span><span class="n">Exit</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">status</span><span class="p">);</span>
 </code></pre></div></td></tr></table></div>
 <p><em>[Exit]</em> terminates the current process and returns control to the calling process, which is typically the command interpreter. The value of <em>[status]</em>, known <strong>as the return code</strong>, can be used by the command interpreter. By convention, 0 indicates that the program completed successfully, while any other value indicates an error. On Windows, the return code is available in the <em>[%ERRORLEVEL%]</em> variable at the command prompt and in the <em>[$LASTEXITCODE]</em> variable within PowerShell; on Linux, it is available in the macOS variable and in the <em>[$?]</em> variable in the shell. Thus:</p>
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-59-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-59-1" name="__codelineno-59-1"></a>Environment.Exit(0);
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-59-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-59-1" name="__codelineno-59-1"></a><span class="n">Environment</span><span class="p">.</span><span class="n">Exit</span><span class="p">(</span><span class="mi">0</span><span class="p">);</span>
 </code></pre></div></td></tr></table></div>
 <p>will terminate the program with a return code of 0. With high-level statements, a <em>[return]</em> statement also terminates the program (return code 0), unless it is located within a function.</p>
 <p>The program <em>[bases-16.cs]</em> receives its return code as an argument:</p>
@@ -3528,14 +3528,14 @@
 <span class="normal"><a href="#__codelineno-62-5">5</a></span>
 <span class="normal"><a href="#__codelineno-62-6">6</a></span>
 <span class="normal"><a href="#__codelineno-62-7">7</a></span>
-<span class="normal"><a href="#__codelineno-62-8">8</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-62-1" name="__codelineno-62-1"></a><span class="k">if</span><span class="w"> </span><span class="o">(</span>condition<span class="o">)</span>
-<a id="__codelineno-62-2" name="__codelineno-62-2"></a><span class="o">{</span>
-<a id="__codelineno-62-3" name="__codelineno-62-3"></a><span class="w">    </span>actions_condition_vraie<span class="p">;</span>
-<a id="__codelineno-62-4" name="__codelineno-62-4"></a><span class="o">}</span>
+<span class="normal"><a href="#__codelineno-62-8">8</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-62-1" name="__codelineno-62-1"></a><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">condition</span><span class="p">)</span>
+<a id="__codelineno-62-2" name="__codelineno-62-2"></a><span class="p">{</span>
+<a id="__codelineno-62-3" name="__codelineno-62-3"></a><span class="w">    </span><span class="n">actions_condition_vraie</span><span class="p">;</span>
+<a id="__codelineno-62-4" name="__codelineno-62-4"></a><span class="p">}</span>
 <a id="__codelineno-62-5" name="__codelineno-62-5"></a><span class="k">else</span>
-<a id="__codelineno-62-6" name="__codelineno-62-6"></a><span class="o">{</span>
-<a id="__codelineno-62-7" name="__codelineno-62-7"></a><span class="w">    </span>actions_condition_fausse<span class="p">;</span>
-<a id="__codelineno-62-8" name="__codelineno-62-8"></a><span class="o">}</span>
+<a id="__codelineno-62-6" name="__codelineno-62-6"></a><span class="p">{</span>
+<a id="__codelineno-62-7" name="__codelineno-62-7"></a><span class="w">    </span><span class="n">actions_condition_fausse</span><span class="p">;</span>
+<a id="__codelineno-62-8" name="__codelineno-62-8"></a><span class="p">}</span>
 </code></pre></div></td></tr></table></div>
 <p>Notes:</p>
 <ul>
@@ -3556,7 +3556,7 @@
 <a id="__codelineno-63-4" name="__codelineno-63-4"></a>finsi
 </code></pre></div></td></tr></table></div>
 <p>Example:</p>
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-64-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-64-1" name="__codelineno-64-1"></a><span class="k">if</span><span class="w"> </span><span class="o">(</span>x<span class="w"> </span>&gt;<span class="w"> </span><span class="m">0</span><span class="o">)</span><span class="w"> </span><span class="o">{</span><span class="w"> </span><span class="nv">nx</span><span class="w"> </span><span class="o">=</span><span class="w"> </span>nx<span class="w"> </span>+<span class="w"> </span><span class="m">1</span><span class="p">;</span><span class="w"> </span><span class="nv">sx</span><span class="w"> </span><span class="o">=</span><span class="w"> </span>sx<span class="w"> </span>+<span class="w"> </span>x<span class="p">;</span><span class="w"> </span><span class="o">}</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="nv">dx</span><span class="w"> </span><span class="o">=</span><span class="w"> </span>dx<span class="w"> </span>-<span class="w"> </span>x<span class="p">;</span>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-64-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-64-1" name="__codelineno-64-1"></a><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">x</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="mi">0</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="n">nx</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">nx</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span><span class="w"> </span><span class="n">sx</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">sx</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">x</span><span class="p">;</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="n">dx</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">dx</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">x</span><span class="p">;</span>
 </code></pre></div></td></tr></table></div>
 <p>Choice structures can be nested. This sometimes leads to the problem illustrated by the program <em>[bases-17.cs]</em>:</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-65-1"> 1</a></span>
@@ -3675,18 +3675,18 @@
 <span class="normal"><a href="#__codelineno-67-10">10</a></span>
 <span class="normal"><a href="#__codelineno-67-11">11</a></span>
 <span class="normal"><a href="#__codelineno-67-12">12</a></span>
-<span class="normal"><a href="#__codelineno-67-13">13</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-67-1" name="__codelineno-67-1"></a><span class="n">switch</span> <span class="p">(</span><span class="n">expression</span><span class="p">)</span>
+<span class="normal"><a href="#__codelineno-67-13">13</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-67-1" name="__codelineno-67-1"></a><span class="k">switch</span><span class="w"> </span><span class="p">(</span><span class="n">expression</span><span class="p">)</span>
 <a id="__codelineno-67-2" name="__codelineno-67-2"></a><span class="p">{</span>
-<a id="__codelineno-67-3" name="__codelineno-67-3"></a>    <span class="k">case</span> <span class="n">v1</span><span class="p">:</span>
-<a id="__codelineno-67-4" name="__codelineno-67-4"></a>        <span class="n">actions1</span><span class="p">;</span>
-<a id="__codelineno-67-5" name="__codelineno-67-5"></a>        <span class="k">break</span><span class="p">;</span>
-<a id="__codelineno-67-6" name="__codelineno-67-6"></a>    <span class="k">case</span> <span class="n">v2</span><span class="p">:</span>
-<a id="__codelineno-67-7" name="__codelineno-67-7"></a>        <span class="n">actions2</span><span class="p">;</span>
-<a id="__codelineno-67-8" name="__codelineno-67-8"></a>        <span class="k">break</span><span class="p">;</span>
-<a id="__codelineno-67-9" name="__codelineno-67-9"></a>    <span class="o">...</span>
-<a id="__codelineno-67-10" name="__codelineno-67-10"></a>    <span class="n">default</span><span class="p">:</span>
-<a id="__codelineno-67-11" name="__codelineno-67-11"></a>        <span class="n">actions_sinon</span><span class="p">;</span>
-<a id="__codelineno-67-12" name="__codelineno-67-12"></a>        <span class="k">break</span><span class="p">;</span>
+<a id="__codelineno-67-3" name="__codelineno-67-3"></a><span class="w">    </span><span class="k">case</span><span class="w"> </span><span class="n">v1</span><span class="p">:</span>
+<a id="__codelineno-67-4" name="__codelineno-67-4"></a><span class="w">        </span><span class="n">actions1</span><span class="p">;</span>
+<a id="__codelineno-67-5" name="__codelineno-67-5"></a><span class="w">        </span><span class="k">break</span><span class="p">;</span>
+<a id="__codelineno-67-6" name="__codelineno-67-6"></a><span class="w">    </span><span class="k">case</span><span class="w"> </span><span class="n">v2</span><span class="p">:</span>
+<a id="__codelineno-67-7" name="__codelineno-67-7"></a><span class="w">        </span><span class="n">actions2</span><span class="p">;</span>
+<a id="__codelineno-67-8" name="__codelineno-67-8"></a><span class="w">        </span><span class="k">break</span><span class="p">;</span>
+<a id="__codelineno-67-9" name="__codelineno-67-9"></a><span class="w">    </span><span class="p">...</span>
+<a id="__codelineno-67-10" name="__codelineno-67-10"></a><span class="w">    </span><span class="k">default</span><span class="p">:</span>
+<a id="__codelineno-67-11" name="__codelineno-67-11"></a><span class="w">        </span><span class="n">actions_sinon</span><span class="p">;</span>
+<a id="__codelineno-67-12" name="__codelineno-67-12"></a><span class="w">        </span><span class="k">break</span><span class="p">;</span>
 <a id="__codelineno-67-13" name="__codelineno-67-13"></a><span class="p">}</span>
 </code></pre></div></td></tr></table></div>
 <p>Notes:</p>
@@ -3727,13 +3727,13 @@
 <span class="normal"><a href="#__codelineno-69-4">4</a></span>
 <span class="normal"><a href="#__codelineno-69-5">5</a></span>
 <span class="normal"><a href="#__codelineno-69-6">6</a></span>
-<span class="normal"><a href="#__codelineno-69-7">7</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-69-1" name="__codelineno-69-1"></a>resultat = expression switch
-<a id="__codelineno-69-2" name="__codelineno-69-2"></a>{
-<a id="__codelineno-69-3" name="__codelineno-69-3"></a>    motif1 =&gt; valeur1,
-<a id="__codelineno-69-4" name="__codelineno-69-4"></a>    motif2 =&gt; valeur2,
-<a id="__codelineno-69-5" name="__codelineno-69-5"></a>    ...
-<a id="__codelineno-69-6" name="__codelineno-69-6"></a>    _ =&gt; valeur_sinon
-<a id="__codelineno-69-7" name="__codelineno-69-7"></a>};
+<span class="normal"><a href="#__codelineno-69-7">7</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-69-1" name="__codelineno-69-1"></a><span class="n">resultat</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">expression</span><span class="w"> </span><span class="k">switch</span>
+<a id="__codelineno-69-2" name="__codelineno-69-2"></a><span class="p">{</span>
+<a id="__codelineno-69-3" name="__codelineno-69-3"></a><span class="w">    </span><span class="n">motif1</span><span class="w"> </span><span class="o">=&gt;</span><span class="w"> </span><span class="n">valeur1</span><span class="p">,</span>
+<a id="__codelineno-69-4" name="__codelineno-69-4"></a><span class="w">    </span><span class="n">motif2</span><span class="w"> </span><span class="o">=&gt;</span><span class="w"> </span><span class="n">valeur2</span><span class="p">,</span>
+<a id="__codelineno-69-5" name="__codelineno-69-5"></a><span class="w">    </span><span class="p">...</span>
+<a id="__codelineno-69-6" name="__codelineno-69-6"></a><span class="w">    </span><span class="n">_</span><span class="w"> </span><span class="o">=&gt;</span><span class="w"> </span><span class="n">valeur_sinon</span>
+<a id="__codelineno-69-7" name="__codelineno-69-7"></a><span class="p">};</span>
 </code></pre></div></td></tr></table></div>
 <p>The expression is compared successively to the patterns; the value associated with the first matching pattern is the result. The pattern <code>\_</code> matches all values: it acts as <em>a wildcard</em>. A pattern can be:</p>
 <ul>
@@ -3923,10 +3923,10 @@
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-72-1">1</a></span>
 <span class="normal"><a href="#__codelineno-72-2">2</a></span>
 <span class="normal"><a href="#__codelineno-72-3">3</a></span>
-<span class="normal"><a href="#__codelineno-72-4">4</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-72-1" name="__codelineno-72-1"></a><span class="k">for</span><span class="w"> </span><span class="o">(</span><span class="nv">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span>id<span class="p">;</span><span class="w"> </span>i<span class="w"> </span>&lt;<span class="o">=</span><span class="w"> </span><span class="k">if</span><span class="p">;</span><span class="w"> </span><span class="nv">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span>i<span class="w"> </span>+<span class="w"> </span>ip<span class="o">)</span>
-<a id="__codelineno-72-2" name="__codelineno-72-2"></a><span class="o">{</span>
-<a id="__codelineno-72-3" name="__codelineno-72-3"></a><span class="w">    </span>actions<span class="p">;</span>
-<a id="__codelineno-72-4" name="__codelineno-72-4"></a><span class="o">}</span>
+<span class="normal"><a href="#__codelineno-72-4">4</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-72-1" name="__codelineno-72-1"></a><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">id</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">&lt;=</span><span class="w"> </span><span class="k">if</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">ip</span><span class="p">)</span>
+<a id="__codelineno-72-2" name="__codelineno-72-2"></a><span class="p">{</span>
+<a id="__codelineno-72-3" name="__codelineno-72-3"></a><span class="w">    </span><span class="n">actions</span><span class="p">;</span>
+<a id="__codelineno-72-4" name="__codelineno-72-4"></a><span class="p">}</span>
 </code></pre></div></td></tr></table></div>
 <p>Notes:</p>
 <ul>
@@ -3958,10 +3958,10 @@
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-75-1">1</a></span>
 <span class="normal"><a href="#__codelineno-75-2">2</a></span>
 <span class="normal"><a href="#__codelineno-75-3">3</a></span>
-<span class="normal"><a href="#__codelineno-75-4">4</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-75-1" name="__codelineno-75-1"></a>foreach (Type variable in collection)
-<a id="__codelineno-75-2" name="__codelineno-75-2"></a>{
-<a id="__codelineno-75-3" name="__codelineno-75-3"></a>    instructions;
-<a id="__codelineno-75-4" name="__codelineno-75-4"></a>}
+<span class="normal"><a href="#__codelineno-75-4">4</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-75-1" name="__codelineno-75-1"></a><span class="k">foreach</span><span class="w"> </span><span class="p">(</span><span class="n">Type</span><span class="w"> </span><span class="n">variable</span><span class="w"> </span><span class="k">in</span><span class="w"> </span><span class="n">collection</span><span class="p">)</span>
+<a id="__codelineno-75-2" name="__codelineno-75-2"></a><span class="p">{</span>
+<a id="__codelineno-75-3" name="__codelineno-75-3"></a><span class="w">    </span><span class="n">instructions</span><span class="p">;</span>
+<a id="__codelineno-75-4" name="__codelineno-75-4"></a><span class="p">}</span>
 </code></pre></div></td></tr></table></div>
 <p>Notes:</p>
 <ul>
@@ -3974,10 +3974,10 @@
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-76-1">1</a></span>
 <span class="normal"><a href="#__codelineno-76-2">2</a></span>
 <span class="normal"><a href="#__codelineno-76-3">3</a></span>
-<span class="normal"><a href="#__codelineno-76-4">4</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-76-1" name="__codelineno-76-1"></a>while (condition)
-<a id="__codelineno-76-2" name="__codelineno-76-2"></a>{
-<a id="__codelineno-76-3" name="__codelineno-76-3"></a>    actions;
-<a id="__codelineno-76-4" name="__codelineno-76-4"></a>}
+<span class="normal"><a href="#__codelineno-76-4">4</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-76-1" name="__codelineno-76-1"></a><span class="k">while</span><span class="w"> </span><span class="p">(</span><span class="n">condition</span><span class="p">)</span>
+<a id="__codelineno-76-2" name="__codelineno-76-2"></a><span class="p">{</span>
+<a id="__codelineno-76-3" name="__codelineno-76-3"></a><span class="w">    </span><span class="n">actions</span><span class="p">;</span>
+<a id="__codelineno-76-4" name="__codelineno-76-4"></a><span class="p">}</span>
 </code></pre></div></td></tr></table></div>
 <p>The loop continues as long as the condition is true. The loop may never be executed. The notes are the same as for <em>[for]</em>. The corresponding algorithmic structure is the while structure:</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-77-1">1</a></span>
@@ -3992,9 +3992,9 @@
 <span class="normal"><a href="#__codelineno-78-2">2</a></span>
 <span class="normal"><a href="#__codelineno-78-3">3</a></span>
 <span class="normal"><a href="#__codelineno-78-4">4</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-78-1" name="__codelineno-78-1"></a><span class="k">do</span>
-<a id="__codelineno-78-2" name="__codelineno-78-2"></a><span class="o">{</span>
-<a id="__codelineno-78-3" name="__codelineno-78-3"></a><span class="w">    </span>instructions<span class="p">;</span>
-<a id="__codelineno-78-4" name="__codelineno-78-4"></a><span class="o">}</span><span class="w"> </span><span class="k">while</span><span class="w"> </span><span class="o">(</span>condition<span class="o">)</span><span class="p">;</span>
+<a id="__codelineno-78-2" name="__codelineno-78-2"></a><span class="p">{</span>
+<a id="__codelineno-78-3" name="__codelineno-78-3"></a><span class="w">    </span><span class="n">instructions</span><span class="p">;</span>
+<a id="__codelineno-78-4" name="__codelineno-78-4"></a><span class="p">}</span><span class="w"> </span><span class="k">while</span><span class="w"> </span><span class="p">(</span><span class="n">condition</span><span class="p">);</span>
 </code></pre></div></td></tr></table></div>
 <p>The loop continues until the condition becomes false. Here, the loop is executed at least once. The corresponding algorithmic structure is the “repeat … until” structure:</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-79-1">1</a></span>
@@ -4008,10 +4008,10 @@
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-80-1">1</a></span>
 <span class="normal"><a href="#__codelineno-80-2">2</a></span>
 <span class="normal"><a href="#__codelineno-80-3">3</a></span>
-<span class="normal"><a href="#__codelineno-80-4">4</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-80-1" name="__codelineno-80-1"></a><span class="k">for</span><span class="w"> </span><span class="o">(</span>instructions_depart<span class="p">;</span><span class="w"> </span>condition<span class="p">;</span><span class="w"> </span>instructions_fin_boucle<span class="o">)</span>
-<a id="__codelineno-80-2" name="__codelineno-80-2"></a><span class="o">{</span>
-<a id="__codelineno-80-3" name="__codelineno-80-3"></a><span class="w">    </span>instructions<span class="p">;</span>
-<a id="__codelineno-80-4" name="__codelineno-80-4"></a><span class="o">}</span>
+<span class="normal"><a href="#__codelineno-80-4">4</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-80-1" name="__codelineno-80-1"></a><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="n">instructions_depart</span><span class="p">;</span><span class="w"> </span><span class="n">condition</span><span class="p">;</span><span class="w"> </span><span class="n">instructions_fin_boucle</span><span class="p">)</span>
+<a id="__codelineno-80-2" name="__codelineno-80-2"></a><span class="p">{</span>
+<a id="__codelineno-80-3" name="__codelineno-80-3"></a><span class="w">    </span><span class="n">instructions</span><span class="p">;</span>
+<a id="__codelineno-80-4" name="__codelineno-80-4"></a><span class="p">}</span>
 </code></pre></div></td></tr></table></div>
 <p>The loop continues as long as the condition is true (evaluated before each iteration). The <em>[instructions_depart]</em> statements are executed before entering the loop for the first time. The <em>[instructions_fin_boucle]</em> statements are executed after each iteration of the loop. The various instructions in <em>[instructions_depart]</em> and <em>[instructions_fin_boucle]</em> are separated by commas. The corresponding algorithmic structure is as follows:</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-81-1">1</a></span>
@@ -4189,18 +4189,18 @@
 <span class="normal"><a href="#__codelineno-83-9"> 9</a></span>
 <span class="normal"><a href="#__codelineno-83-10">10</a></span>
 <span class="normal"><a href="#__codelineno-83-11">11</a></span>
-<span class="normal"><a href="#__codelineno-83-12">12</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-83-1" name="__codelineno-83-1"></a>&gt;<span class="w"> </span>dotnet<span class="w"> </span>run<span class="w"> </span>bases-19.cs
-<a id="__codelineno-83-2" name="__codelineno-83-2"></a><span class="k">for</span><span class="w"> </span><span class="o">(</span><span class="m">1</span><span class="o">)</span><span class="w"> </span>:<span class="w"> </span><span class="nv">somme</span><span class="o">=</span><span class="m">55</span>
-<a id="__codelineno-83-3" name="__codelineno-83-3"></a><span class="k">for</span><span class="w"> </span><span class="o">(</span><span class="m">2</span><span class="o">)</span><span class="w"> </span>:<span class="w"> </span><span class="nv">somme</span><span class="o">=</span><span class="m">55</span>
-<a id="__codelineno-83-4" name="__codelineno-83-4"></a><span class="k">while</span><span class="w"> </span>:<span class="w"> </span><span class="nv">somme</span><span class="o">=</span><span class="m">55</span>
-<a id="__codelineno-83-5" name="__codelineno-83-5"></a><span class="k">do</span><span class="w"> </span><span class="k">while</span><span class="w"> </span>:<span class="w"> </span><span class="nv">somme</span><span class="o">=</span><span class="m">55</span>
-<a id="__codelineno-83-6" name="__codelineno-83-6"></a><span class="m">5</span>!<span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">120</span>
+<span class="normal"><a href="#__codelineno-83-12">12</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-83-1" name="__codelineno-83-1"></a>&gt; dotnet run bases-19.cs
+<a id="__codelineno-83-2" name="__codelineno-83-2"></a>for (1) : somme=55
+<a id="__codelineno-83-3" name="__codelineno-83-3"></a>for (2) : somme=55
+<a id="__codelineno-83-4" name="__codelineno-83-4"></a>while : somme=55
+<a id="__codelineno-83-5" name="__codelineno-83-5"></a>do while : somme=55
+<a id="__codelineno-83-6" name="__codelineno-83-6"></a>5! = 120
 <a id="__codelineno-83-7" name="__codelineno-83-7"></a>paul
 <a id="__codelineno-83-8" name="__codelineno-83-8"></a>hélène
 <a id="__codelineno-83-9" name="__codelineno-83-9"></a>jacques
 <a id="__codelineno-83-10" name="__codelineno-83-10"></a>sylvie
-<a id="__codelineno-83-11" name="__codelineno-83-11"></a><span class="m">1</span><span class="w"> </span><span class="m">3</span><span class="w"> </span><span class="m">5</span><span class="w"> </span><span class="m">7</span><span class="w"> </span>
-<a id="__codelineno-83-12" name="__codelineno-83-12"></a>premier<span class="w"> </span>multiple<span class="w"> </span>de<span class="w"> </span><span class="m">7</span><span class="w"> </span>supérieur<span class="w"> </span>à<span class="w"> </span><span class="m">50</span><span class="w"> </span>:<span class="w"> </span><span class="m">56</span>
+<a id="__codelineno-83-11" name="__codelineno-83-11"></a>1 3 5 7 
+<a id="__codelineno-83-12" name="__codelineno-83-12"></a>premier multiple de 7 supérieur à 50 : 56
 </code></pre></div></td></tr></table></div>
 <p>Comments:</p>
 <ul>
@@ -4225,15 +4225,15 @@
 <span class="normal"><a href="#__codelineno-84-6">6</a></span>
 <span class="normal"><a href="#__codelineno-84-7">7</a></span>
 <span class="normal"><a href="#__codelineno-84-8">8</a></span>
-<span class="normal"><a href="#__codelineno-84-9">9</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-84-1" name="__codelineno-84-1"></a>try
-<a id="__codelineno-84-2" name="__codelineno-84-2"></a>{
-<a id="__codelineno-84-3" name="__codelineno-84-3"></a>    code susceptible de générer une exception
-<a id="__codelineno-84-4" name="__codelineno-84-4"></a>}
-<a id="__codelineno-84-5" name="__codelineno-84-5"></a>catch (Exception e)
-<a id="__codelineno-84-6" name="__codelineno-84-6"></a>{
-<a id="__codelineno-84-7" name="__codelineno-84-7"></a>    traiter l'exception e
-<a id="__codelineno-84-8" name="__codelineno-84-8"></a>}
-<a id="__codelineno-84-9" name="__codelineno-84-9"></a>instruction suivante
+<span class="normal"><a href="#__codelineno-84-9">9</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-84-1" name="__codelineno-84-1"></a><span class="k">try</span>
+<a id="__codelineno-84-2" name="__codelineno-84-2"></a><span class="p">{</span>
+<a id="__codelineno-84-3" name="__codelineno-84-3"></a><span class="w">    </span><span class="n">code</span><span class="w"> </span><span class="n">susceptible</span><span class="w"> </span><span class="n">de</span><span class="w"> </span><span class="n">générer</span><span class="w"> </span><span class="n">une</span><span class="w"> </span><span class="n">exception</span>
+<a id="__codelineno-84-4" name="__codelineno-84-4"></a><span class="p">}</span>
+<a id="__codelineno-84-5" name="__codelineno-84-5"></a><span class="k">catch</span><span class="w"> </span><span class="p">(</span><span class="n">Exception</span><span class="w"> </span><span class="n">e</span><span class="p">)</span>
+<a id="__codelineno-84-6" name="__codelineno-84-6"></a><span class="p">{</span>
+<a id="__codelineno-84-7" name="__codelineno-84-7"></a><span class="w">    </span><span class="n">traiter</span><span class="w"> </span><span class="n">l</span><span class="err">'</span><span class="n">exception</span><span class="w"> </span><span class="n">e</span>
+<a id="__codelineno-84-8" name="__codelineno-84-8"></a><span class="p">}</span>
+<a id="__codelineno-84-9" name="__codelineno-84-9"></a><span class="n">instruction</span><span class="w"> </span><span class="n">suivante</span>
 </code></pre></div></td></tr></table></div>
 <p>If the code in the <em>[try]</em> block does not throw an exception, execution proceeds to the next statement; otherwise, execution proceeds to the body of the <em>[catch]</em> block, then to the next statement. Note the following points:</p>
 <ul>
@@ -4251,19 +4251,19 @@
 <span class="normal"><a href="#__codelineno-85-10">10</a></span>
 <span class="normal"><a href="#__codelineno-85-11">11</a></span>
 <span class="normal"><a href="#__codelineno-85-12">12</a></span>
-<span class="normal"><a href="#__codelineno-85-13">13</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-85-1" name="__codelineno-85-1"></a>try
-<a id="__codelineno-85-2" name="__codelineno-85-2"></a>{
-<a id="__codelineno-85-3" name="__codelineno-85-3"></a>    code susceptible de générer les exceptions
-<a id="__codelineno-85-4" name="__codelineno-85-4"></a>}
-<a id="__codelineno-85-5" name="__codelineno-85-5"></a>catch (IndexOutOfRangeException e1)
-<a id="__codelineno-85-6" name="__codelineno-85-6"></a>{
-<a id="__codelineno-85-7" name="__codelineno-85-7"></a>    traiter l'exception e1
-<a id="__codelineno-85-8" name="__codelineno-85-8"></a>}
-<a id="__codelineno-85-9" name="__codelineno-85-9"></a>catch (FormatException e2)
-<a id="__codelineno-85-10" name="__codelineno-85-10"></a>{
-<a id="__codelineno-85-11" name="__codelineno-85-11"></a>    traiter l'exception e2
-<a id="__codelineno-85-12" name="__codelineno-85-12"></a>}
-<a id="__codelineno-85-13" name="__codelineno-85-13"></a>instruction suivante
+<span class="normal"><a href="#__codelineno-85-13">13</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-85-1" name="__codelineno-85-1"></a><span class="k">try</span>
+<a id="__codelineno-85-2" name="__codelineno-85-2"></a><span class="p">{</span>
+<a id="__codelineno-85-3" name="__codelineno-85-3"></a><span class="w">    </span><span class="n">code</span><span class="w"> </span><span class="n">susceptible</span><span class="w"> </span><span class="n">de</span><span class="w"> </span><span class="n">générer</span><span class="w"> </span><span class="n">les</span><span class="w"> </span><span class="n">exceptions</span>
+<a id="__codelineno-85-4" name="__codelineno-85-4"></a><span class="p">}</span>
+<a id="__codelineno-85-5" name="__codelineno-85-5"></a><span class="k">catch</span><span class="w"> </span><span class="p">(</span><span class="n">IndexOutOfRangeException</span><span class="w"> </span><span class="n">e1</span><span class="p">)</span>
+<a id="__codelineno-85-6" name="__codelineno-85-6"></a><span class="p">{</span>
+<a id="__codelineno-85-7" name="__codelineno-85-7"></a><span class="w">    </span><span class="n">traiter</span><span class="w"> </span><span class="n">l</span><span class="err">'</span><span class="n">exception</span><span class="w"> </span><span class="n">e1</span>
+<a id="__codelineno-85-8" name="__codelineno-85-8"></a><span class="p">}</span>
+<a id="__codelineno-85-9" name="__codelineno-85-9"></a><span class="k">catch</span><span class="w"> </span><span class="p">(</span><span class="n">FormatException</span><span class="w"> </span><span class="n">e2</span><span class="p">)</span>
+<a id="__codelineno-85-10" name="__codelineno-85-10"></a><span class="p">{</span>
+<a id="__codelineno-85-11" name="__codelineno-85-11"></a><span class="w">    </span><span class="n">traiter</span><span class="w"> </span><span class="n">l</span><span class="err">'</span><span class="n">exception</span><span class="w"> </span><span class="n">e2</span>
+<a id="__codelineno-85-12" name="__codelineno-85-12"></a><span class="p">}</span>
+<a id="__codelineno-85-13" name="__codelineno-85-13"></a><span class="n">instruction</span><span class="w"> </span><span class="n">suivante</span>
 </code></pre></div></td></tr></table></div>
 <p>The <em>[catch]</em> clauses are evaluated in order; the first one whose type matches the exception is executed. A <strong><em>[catch (Exception e)]</em></strong> clause must therefore be placed last;</p>
 <ul>
@@ -4281,19 +4281,19 @@
 <span class="normal"><a href="#__codelineno-86-10">10</a></span>
 <span class="normal"><a href="#__codelineno-86-11">11</a></span>
 <span class="normal"><a href="#__codelineno-86-12">12</a></span>
-<span class="normal"><a href="#__codelineno-86-13">13</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-86-1" name="__codelineno-86-1"></a>try
-<a id="__codelineno-86-2" name="__codelineno-86-2"></a>{
-<a id="__codelineno-86-3" name="__codelineno-86-3"></a>    code susceptible de générer une exception
-<a id="__codelineno-86-4" name="__codelineno-86-4"></a>}
-<a id="__codelineno-86-5" name="__codelineno-86-5"></a>catch (Exception e)
-<a id="__codelineno-86-6" name="__codelineno-86-6"></a>{
-<a id="__codelineno-86-7" name="__codelineno-86-7"></a>    traiter l'exception e
-<a id="__codelineno-86-8" name="__codelineno-86-8"></a>}
-<a id="__codelineno-86-9" name="__codelineno-86-9"></a>finally
-<a id="__codelineno-86-10" name="__codelineno-86-10"></a>{
-<a id="__codelineno-86-11" name="__codelineno-86-11"></a>    code exécuté après try ou catch
-<a id="__codelineno-86-12" name="__codelineno-86-12"></a>}
-<a id="__codelineno-86-13" name="__codelineno-86-13"></a>instruction suivante
+<span class="normal"><a href="#__codelineno-86-13">13</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-86-1" name="__codelineno-86-1"></a><span class="k">try</span>
+<a id="__codelineno-86-2" name="__codelineno-86-2"></a><span class="p">{</span>
+<a id="__codelineno-86-3" name="__codelineno-86-3"></a><span class="w">    </span><span class="n">code</span><span class="w"> </span><span class="n">susceptible</span><span class="w"> </span><span class="n">de</span><span class="w"> </span><span class="n">générer</span><span class="w"> </span><span class="n">une</span><span class="w"> </span><span class="n">exception</span>
+<a id="__codelineno-86-4" name="__codelineno-86-4"></a><span class="p">}</span>
+<a id="__codelineno-86-5" name="__codelineno-86-5"></a><span class="k">catch</span><span class="w"> </span><span class="p">(</span><span class="n">Exception</span><span class="w"> </span><span class="n">e</span><span class="p">)</span>
+<a id="__codelineno-86-6" name="__codelineno-86-6"></a><span class="p">{</span>
+<a id="__codelineno-86-7" name="__codelineno-86-7"></a><span class="w">    </span><span class="n">traiter</span><span class="w"> </span><span class="n">l</span><span class="err">'</span><span class="n">exception</span><span class="w"> </span><span class="n">e</span>
+<a id="__codelineno-86-8" name="__codelineno-86-8"></a><span class="p">}</span>
+<a id="__codelineno-86-9" name="__codelineno-86-9"></a><span class="k">finally</span>
+<a id="__codelineno-86-10" name="__codelineno-86-10"></a><span class="p">{</span>
+<a id="__codelineno-86-11" name="__codelineno-86-11"></a><span class="w">    </span><span class="n">code</span><span class="w"> </span><span class="n">exécuté</span><span class="w"> </span><span class="n">après</span><span class="w"> </span><span class="k">try</span><span class="w"> </span><span class="n">ou</span><span class="w"> </span><span class="k">catch</span>
+<a id="__codelineno-86-12" name="__codelineno-86-12"></a><span class="p">}</span>
+<a id="__codelineno-86-13" name="__codelineno-86-13"></a><span class="n">instruction</span><span class="w"> </span><span class="n">suivante</span>
 </code></pre></div></td></tr></table></div>
 <p>Whether or not an exception occurs, the code in the <em>[finally]</em> clause is always executed. For example, you can use it to close a file;</p>
 <ul>
@@ -4493,7 +4493,7 @@
 <p>This program has a weakness: an age such as 99999999999 causes a <em>[OverflowException]</em> exception, which is not caught and causes the program to terminate. We could add a <em>[catch]</em> clause; however, it is simpler to use <em>[int.TryParse]</em>, as the example application below will do. We will reserve exceptions for truly exceptional situations.</p>
 <h3 id="364-multiple-catch-clauses-filters-and-exception-throws">3.6.4. <span style="color: #1f4d78">Multiple catch clauses, filters, and exception throws</span></h3>
 <p>The program itself can throw an exception using the <em>[throw]</em> statement:</p>
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-93-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-93-1" name="__codelineno-93-1"></a>throw new ArgumentException("message d'erreur");
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-93-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-93-1" name="__codelineno-93-1"></a><span class="k">throw</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="nf">ArgumentException</span><span class="p">(</span><span class="s">"message d'erreur"</span><span class="p">);</span>
 </code></pre></div></td></tr></table></div>
 <p>Execution of the current method stops, and the exception is propagated up through the calling methods until a <em>[catch]</em> clause handles it; if none does, the program terminates and displays the exception. In a <em>[catch]</em> clause, the <strong><em>[throw;]</em></strong> statement (without parameters) rethrows the current exception, for example, after logging it.</p>
 <p>Starting with C# 6, a <em>[catch]</em> clause can be followed by a <strong><em>[when (condition)]</em></strong> <strong>filter</strong>: the clause is only executed if the condition is true. Starting with C# 7, <em>[throw]</em> can also be used as an <strong>expression</strong>, to the right of the ?? operator or within a ternary operator.</p>
@@ -4861,7 +4861,7 @@
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-101-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-101-1" name="__codelineno-101-1"></a>P arg0 arg1 ... argn
 </code></pre></div></td></tr></table></div>
 <p>and if the function <em>[Main]</em> is declared as follows:</p>
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-102-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-102-1" name="__codelineno-102-1"></a>static void Main(string[] args)
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-102-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-102-1" name="__codelineno-102-1"></a><span class="k">static</span><span class="w"> </span><span class="k">void</span><span class="w"> </span><span class="nf">Main</span><span class="p">(</span><span class="kt">string</span><span class="p">[]</span><span class="w"> </span><span class="n">args</span><span class="p">)</span>
 </code></pre></div></td></tr></table></div>
 <p>then we will have args[0]=&quot;arg0&quot;, args[1]=&quot;arg1&quot;, and so on. With high-level statements, there is no <em>[Main]</em> method written by the programmer, but the array <em>[args]</em> is available in the same way: it is the parameter of the <em>[Main]</em> method generated by the compiler.</p>
 <p>With <em>[dotnet run]</em>, the arguments for the program are placed after two dashes (<em>[--]</em>), which separate them from the options of the <em>[dotnet run]</em> command itself:</p>
@@ -4956,7 +4956,7 @@
 <p>The signature <strong><em>[static void Main()]</em></strong> is valid if the function <em>[Main]</em> takes no parameters. <em>[Main]</em> can also return a <em>[int]</em>, which is then the program’s return code: <strong><em>[static int Main(string[] args)]</em></strong>.</p>
 <h2 id="39-enumerations">3.9. <span style="color: #2e74b5">Enumerations</span></h2>
 <p>An enumeration is a data type whose value domain consists of a set of named integer constants. Consider a program that needs to handle exam grades. There are five possible grades: Pass, AssezBien, Good, TresBien, and Excellent. We can then define an enumeration for these five constants:</p>
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-109-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-109-1" name="__codelineno-109-1"></a>enum Mentions { Passable, AssezBien, Bien, TresBien, Excellent }
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-109-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-109-1" name="__codelineno-109-1"></a><span class="k">enum</span><span class="w"> </span><span class="n">Mentions</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="n">Passable</span><span class="p">,</span><span class="w"> </span><span class="n">AssezBien</span><span class="p">,</span><span class="w"> </span><span class="n">Bien</span><span class="p">,</span><span class="w"> </span><span class="n">TresBien</span><span class="p">,</span><span class="w"> </span><span class="n">Excellent</span><span class="w"> </span><span class="p">}</span>
 </code></pre></div></td></tr></table></div>
 <p>Internally, these five constants are encoded as consecutive integers starting with 0 for the first constant, 1 for the next, and so on. We can also set these values explicitly: <strong><em>[enum Mentions { Passable = 10, AssezBien = 12, ... }]</em></strong>. A variable can be declared to take its values from the enumeration:</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-110-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-110-1" name="__codelineno-110-1"></a>Mentions maMention = Mentions.Passable;
