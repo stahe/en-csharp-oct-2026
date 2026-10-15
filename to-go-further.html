@@ -845,7 +845,7 @@
 
 
 <h1 id="14-to-go-further">14. <span style="color: #2e74b5">To go further</span></h1>
-<p>In 2008, the course concluded with a list of important topics it did not cover: LINQ, document processing; XML, web programming with ASP.NET; and NET Remoting. The landscape has changed:</p>
+<p>In 2008, the course concluded with a list of important topics it did not cover: LINQ, XML document processing, web programming with ASP.NET, and .NET Remoting. The landscape has changed:</p>
 <ul>
 <li><strong>LINQ</strong> is now covered in Chapter 5, and its translation to SQL using Entity Framework Core is covered in Chapter 11;</li>
 <li><strong>web programming</strong> is covered in Chapter 13 using ASP.NET Core;</li>
@@ -853,19 +853,19 @@
 </ul>
 <p>Here are the main topics that build upon this document.</p>
 <h2 id="141-processing-xml-documents">14.1. <span style="color: #2e74b5">Processing XML documents</span></h2>
-<p>JSON has largely replaced XML for data exchange, but XML remains in use (configuration files, document formats, existing SOAP services). .NET provides two API files:</p>
+<p>JSON has largely replaced XML for data exchange, but XML remains in use (configuration files, document formats, existing SOAP services). .NET provides two families of APIs:</p>
 <ul>
-<li><strong>LINQ to XML</strong> (<em>[System.Xml.Linq]</em>: <em>[XDocument]</em> classes, <em>[XElement]</em>, <em>[XAttribute]</em>): the simplest, which allows you to build and query a XML document using LINQ;</li>
-<li>the classes of <em>[System.Xml]</em> (<em>[XmlReader]</em>, <em>[XmlWriter]</em>, <em>[XmlDocument]</em>) and the serialization XML (<em>[XmlSerializer]</em>).</li>
+<li><strong>LINQ to XML</strong> (<em>[System.Xml.Linq]</em>: <em>[XDocument]</em> classes, <em>[XElement]</em>, <em>[XAttribute]</em>): the simplest, which allows you to build and query an XML document using LINQ;</li>
+<li>the classes of <em>[System.Xml]</em> (<em>[XmlReader]</em>, <em>[XmlWriter]</em>, <em>[XmlDocument]</em>) and XML serialization (<em>[XmlSerializer]</em>).</li>
 </ul>
 <h2 id="142-web-applications">14.2. <span style="color: #2e74b5">Web Applications</span></h2>
-<p>Chapter 13 covers only web services (applications that generate data). For web applications that generate pages, HTML, ASP.NET Core offers:</p>
+<p>Chapter 13 covers only web services (applications that generate data). For web applications that generate HTML pages, ASP.NET Core offers:</p>
 <ul>
 <li><strong>ASP.NET Core MVC</strong> and <strong>Razor Pages</strong>: server-side-generated pages; the author wrote the course <a href="https://1drv.ms/b/c/f53a919f43d27eb5/IQDeF3cjaruhRJuZByjmf2rtAZig8xugsSsmLi0dZqxMmso?e=IYKTLy"><u><span style="color: #0563c1">“Step-by-Step Introduction to the ASP.NET Core MVC Framework</span></u></a>” (September 2026);</li>
 <li><strong>Blazor</strong>: interactive web interfaces written in C# rather than JavaScript, running on the server or in the browser (WebAssembly).</li>
 </ul>
 <h2 id="143-desktop-and-mobile-applications">14.3. <span style="color: #2e74b5">Desktop and Mobile Applications</span></h2>
-<p>The chapter on Windows Forms graphical user interfaces has been removed from this document. Windows Forms is still available in .NET 10 (for Windows), as well as <strong>WPF</strong>; <strong>.NET and MAUI</strong> allow you to write a single application for Windows, macOS, Android, and iOS. The concepts covered in Chapters 7 (events) and 9 (asynchronous programming) apply directly here.</p>
+<p>The chapter on Windows Forms graphical user interfaces has been removed from this document. Windows Forms is still available in .NET 10 (for Windows), as well as <strong>WPF</strong>; <strong>.NET MAUI allows you</strong> to write a single application for Windows, macOS, Android, and iOS. The concepts covered in Chapters 7 (events) and 9 (asynchronous programming) apply directly here.</p>
 <h2 id="144-testing">14.4. <span style="color: #2e74b5">Testing</span></h2>
 <p>Chapter 6 introduces MSTest. Two other testing frameworks are widely used: <strong>xUnit</strong> and <strong>NUnit</strong> (version 2.4 of which was used in the 2008 course and has evolved significantly since then). Unit tests are often supplemented with “mock” libraries (simulated objects) and integration tests for ASP.NET Core applications (<em>[WebApplicationFactory]</em>).</p>
 <h2 id="145-performance">14.5. <span style="color: #2e74b5">Performance</span></h2>
@@ -873,17 +873,17 @@
 <ul>
 <li>the <em>[Span&lt;T&gt;]</em> and <em>[Memory&lt;T&gt;]</em> types, which manipulate portions of arrays or strings without copying (Chapter 5);</li>
 <li>ahead-of-time compilation to native code (<strong>Native AOT</strong>, <strong><em>[dotnet publish -p:PublishAot=true]</em></strong>): a standalone executable that starts up very quickly, at the cost of restrictions on reflection (we encountered these with JSON serialization in Chapter 5);</li>
-<li><strong>source generators</strong>, which produce code during compilation (regular expressions generated in Chapter 5, context JSON generated in Chapter 6);</li>
+<li><strong>source generators</strong>, which produce code during compilation (regular expressions generated in Chapter 5, JSON context generated in Chapter 6);</li>
 <li>the <strong>BenchmarkDotNet</strong> tool for precisely measuring code performance.</li>
 </ul>
 <h2 id="146-deployment">14.6. <span style="color: #2e74b5">Deployment</span></h2>
 <p>A .NET program can be deployed in several ways: with the .NET platform installed on the computer (<strong><em>[dotnet publish]</em></strong>), as a standalone executable that includes the platform (<strong><em>[--self-contained]</em></strong>), or in a <strong>container</strong> (<strong><em>[dotnet publish -t:PublishContainer]</em></strong> directly generates a container image, without a <em>[Dockerfile]</em> file).</p>
 <h2 id="147-resources">14.7. <span style="color: #2e74b5">Resources</span></h2>
 <ul>
-<li>the official documentation, in French:<a href="https://1drv.ms/u/c/f53a919f43d27eb5/IQCGMKE_IfbsRrh9MmNMbsEdAe4-5fwx3Vk__d9EEFpmcg0?e=MpkJw6"><u><span style="color: #0563c1"> https://learn.microsoft.com/fr-fr/dotnet/</span></u></a>;</li>
-<li>the C# language guide and its “What’s New” pages:<a href="https://stahe.github.io/csharp-mai-2008/"><u><span style="color: #0563c1"> https://learn.microsoft.com/fr-fr/dotnet/csharp/</span></u></a>;</li>
+<li>the official documentation, https://learn.microsoft.com/en-us/dotnet/<a href="https://1drv.ms/u/c/f53a919f43d27eb5/IQBKY_YgpI-gQahVofMLCSnQAUAUedf3Ebw9wKI2yGokk-M"></a>;</li>
+<li>the C# language guide and its “What’s New” pages:<a href="https://stahe.github.io/en-csharp-mai-2008/"><u><span style="color: #0563c1"> https://learn.microsoft.com/en-us/dotnet/csharp/</span></u></a>;</li>
 <li>the source code for .NET, on GitHub:<a href="https://learn.microsoft.com/fr-fr/dotnet/"><u><span style="color: #0563c1"> https://github.com/dotnet</span></u></a>;</li>
-<li>the reference book *C# in a Nutshell* by Joseph Albahari (O’Reilly), which the 2008 course had already recommended in its C# 3.0 edition.</li>
+<li>the reference book C# in a Nutshell by Joseph Albahari (O’Reilly), which the 2008 course had already recommended in its C# 3.0 edition.</li>
 </ul>
 
 

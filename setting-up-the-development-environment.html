@@ -392,15 +392,15 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#21-sdk-net-10" class="md-nav__link">
+  <a href="#21-net-10-sdk" class="md-nav__link">
     <span class="md-ellipsis">
       
-        2.1. SDK .NET 10
+        2.1. .NET 10 SDK
       
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="2.1. SDK .NET 10">
+    <nav class="md-nav" aria-label="2.1. .NET 10 SDK">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
@@ -974,15 +974,15 @@
 
 
 <h1 id="2-setting-up-the-development-environment">2. <span style="color: #2e74b5">Setting Up the Development Environment</span></h1>
-<p>In 2008, we installed Visual C# 2008 Express, which included the .NET 3.5 framework, SGBD SQL Compact Server, and the MSDN documentation, and then created projects using graphical wizards. Today, the development environment consists of two independent components:</p>
+<p>In 2008, we installed Visual C# 2008 Express, which included the .NET 3.5 framework, the SQL Compact Server DBMS, and the MSDN documentation, and then created projects using graphical wizards. Today, the development environment consists of two independent components:</p>
 <ul>
-<li>the <strong>SDK .NET</strong> (“Software Development Kit”): the compiler, the runtime platform, the libraries, and the <em>[dotnet]</em> command, which allows you to do everything from the command line (create, compile, run, test, and publish a program);</li>
+<li>the .NET SDK (“Software Development Kit”): the compiler, the runtime platform, the libraries, and the <em>[dotnet]</em> command, which allows you to do everything from the command line (create, compile, run, test, and publish a program);</li>
 <li>an <strong>editor</strong> or a <strong>IDE</strong> (integrated development environment): <em>[VS Code]</em> with the <em>[C# Dev Kit]</em> extension, or <em>[Visual Studio 2026]</em>, or <em>[JetBrains Rider]</em>. The editor is based on SDK.</li>
 </ul>
 <p>This document uses the <em>[dotnet]</em> command for all operations: it works the same way on Windows, Linux, and macOS, regardless of the editor chosen.</p>
-<h2 id="21-sdk-net-10">2.1. <span style="color: #2e74b5">SDK .NET 10</span></h2>
+<h2 id="21-net-10-sdk">2.1. <span style="color: #2e74b5">.NET 10 SDK</span></h2>
 <h3 id="211-installation">2.1.1. <span style="color: #1f4d78">Installation</span></h3>
-<p>SDK .NET 10 can be downloaded from<a href="https://dotnet.microsoft.com/download/dotnet/10.0"><u><span style="color: #0563c1"> https://dotnet.microsoft.com/download/dotnet/10.0</span></u></a>. On Windows, you can also install it from a terminal (PowerShell or command prompt) using the <em>[winget]</em> package manager:</p>
+<p>.NET 10 SDK can be downloaded from<a href="https://dotnet.microsoft.com/download/dotnet/10.0"><u><span style="color: #0563c1"> https://dotnet.microsoft.com/download/dotnet/10.0</span></u></a>. On Windows, you can also install it from a terminal (PowerShell or command prompt) using the <em>[winget]</em> package manager:</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-0-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1"></a>winget install Microsoft.DotNet.SDK.10
 </code></pre></div></td></tr></table></div>
 <p>You must select <strong>SDK</strong> (which contains everything) and not just the “runtime” (which only allows you to run pre-compiled programs). On Linux, SDK is available in the repositories of major distributions (for example, <strong><em>[sudo apt install dotnet-sdk-10.0]</em></strong> on Ubuntu; depending on the distribution version, you may need to add the repository specified in Microsoft’s installation documentation beforehand).</p>
@@ -999,9 +999,9 @@
 <p>The exact version (in this case, <em>[10.0.112]</em>) depends on the installation date: Microsoft releases a hotfix update every month. All versions of SDK and 10.0.x are suitable for this document. The <strong><em>[dotnet --info]</em></strong> command provides more detailed information (operating system, location of SDK, versions of installed runtime platforms).</p>
 <h3 id="212-the-dotnet-command">2.1.2. <span style="color: #1f4d78">The dotnet command</span></h3>
 <p>The <em>[dotnet]</em> command includes many subcommands. Here are the ones we’ll use:</p>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: left;"><div style="margin:0 0 0.5em 0"><b>Command</b></div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: left;"><div style="margin:0 0 0.5em 0"><b>Role</b></div></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: left;"><div style="margin:0 0 0.5em 0"><i><b>[dotnet run fichier.cs]</b></i></div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: left;"><div style="margin:0 0 0.5em 0">compiles and runs a single-file application</div></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: left;"><div style="margin:0 0 0.5em 0"><i><b>[dotnet new console -n Nom]</b></i></div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: left;"><div style="margin:0 0 0.5em 0">creates a console project in the <i>[Nom]</i> folder (other templates: <i>[classlib]</i>, <i>[mstest]</i>, [web]…)</div></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: left;"><div style="margin:0 0 0.5em 0"><i><b>[dotnet build]</b></i></div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: left;"><div style="margin:0 0 0.5em 0">compiles the project in the current folder</div></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: left;"><div style="margin:0 0 0.5em 0"><i><b>[dotnet run]</b></i></div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: left;"><div style="margin:0 0 0.5em 0">compiles (if necessary) and runs the project in the current folder</div></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: left;"><div style="margin:0 0 0.5em 0"><i><b>[dotnet test]</b></i></div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: left;"><div style="margin:0 0 0.5em 0">runs the unit tests (Chapter 6)</div></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: left;"><div style="margin:0 0 0.5em 0"><i><b>[dotnet new sln]</b></i></div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: left;"><div style="margin:0 0 0.5em 0">creates a solution (a file that groups multiple projects)</div></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: left;"><div style="margin:0 0 0.5em 0"><i><b>[dotnet sln add Projet]</b></i></div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: left;"><div style="margin:0 0 0.5em 0">adds a project to the solution</div></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: left;"><div style="margin:0 0 0.5em 0"><i><b>[dotnet add package Nom]</b></i></div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: left;"><div style="margin:0 0 0.5em 0">adds a library NuGet to the project (Chapters 10 and 11)</div></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: left;"><div style="margin:0 0 0.5em 0"><i><b>[dotnet add reference ../Autre]</b></i></div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: left;"><div style="margin:0 0 0.5em 0">adds a reference to another project (Chapter 6)</div></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: left;"><div style="margin:0 0 0.5em 0"><i><b>[dotnet publish]</b></i></div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: left;"><div style="margin:0 0 0.5em 0">prepares the program for deployment</div></td></tr></table>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: left;"><div style="margin:0 0 0.5em 0"><b>Command</b></div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: left;"><div style="margin:0 0 0.5em 0"><b>Role</b></div></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: left;"><div style="margin:0 0 0.5em 0"><i><b>[dotnet run file.cs]</b></i></div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: left;"><div style="margin:0 0 0.5em 0">compiles and runs a single-file application</div></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: left;"><div style="margin:0 0 0.5em 0"><i><b>[dotnet new console -n Name]</b></i></div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: left;"><div style="margin:0 0 0.5em 0">creates a console project in the <i>[Name]</i> folder (other templates: <i>[classlib]</i>, <i>[mstest]</i>, [web]…)</div></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: left;"><div style="margin:0 0 0.5em 0"><i><b>[dotnet build]</b></i></div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: left;"><div style="margin:0 0 0.5em 0">compiles the project in the current folder</div></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: left;"><div style="margin:0 0 0.5em 0"><i><b>[dotnet run]</b></i></div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: left;"><div style="margin:0 0 0.5em 0">compiles (if necessary) and runs the project in the current folder</div></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: left;"><div style="margin:0 0 0.5em 0"><i><b>[dotnet test]</b></i></div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: left;"><div style="margin:0 0 0.5em 0">runs the unit tests (Chapter 6)</div></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: left;"><div style="margin:0 0 0.5em 0"><i><b>[dotnet new sln]</b></i></div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: left;"><div style="margin:0 0 0.5em 0">creates a solution (a file that groups multiple projects)</div></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: left;"><div style="margin:0 0 0.5em 0"><i><b>[dotnet sln add Project]</b></i></div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: left;"><div style="margin:0 0 0.5em 0">adds a project to the solution</div></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: left;"><div style="margin:0 0 0.5em 0"><i><b>[dotnet add package Name]</b></i></div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: left;"><div style="margin:0 0 0.5em 0">adds a library NuGet to the project (Chapters 10 and 11)</div></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: left;"><div style="margin:0 0 0.5em 0"><i><b>[dotnet add reference ../Other]</b></i></div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: left;"><div style="margin:0 0 0.5em 0">adds a reference to another project (Chapter 6)</div></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: left;"><div style="margin:0 0 0.5em 0"><i><b>[dotnet publish]</b></i></div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: left;"><div style="margin:0 0 0.5em 0">prepares the program for deployment</div></td></tr></table>
 
-<p>Libraries that are not part of the platform are distributed as <strong>NuGet packages</strong>, downloaded from<a href="https://www.nuget.org/"><u><span style="color: #0563c1"> https://www.nuget.org</span></u></a> and stored on the computer in the <em>[%USERPROFILE%\.nuget\packages]</em> folder. In 2008, the DLL files for the libraries (Spring.NET, NUnit, and the MySQL connector) into a <em>[lib]</em> folder within the project; today, the project declares the packages it needs, and the <em>[dotnet]</em> command downloads them.</p>
+<p>Libraries that are not part of the platform are distributed as <strong>NuGet packages</strong>, downloaded from<a href="https://www.nuget.org/"><u><span style="color: #0563c1"> https://www.nuget.org</span></u></a> and stored on the computer in the <em>[%USERPROFILE%\.nuget\packages]</em> folder. In 2008, we copied the DLL files for the libraries (Spring.NET, NUnit, and the MySQL connector) into a <em>[lib]</em> folder within the project; today, the project declares the packages it needs, and the <em>[dotnet]</em> command downloads them.</p>
 <h2 id="22-the-editor">2.2. <span style="color: #2e74b5">The editor</span></h2>
 <h3 id="221-vs-code">2.2.1. <span style="color: #1f4d78">VS Code</span></h3>
 <p><a href="https://code.visualstudio.com/"><u><span style="color: #0563c1">VS Code</span></u></a> is a free, cross-platform editor. To program in C#, you add Microsoft’s <strong>C# Dev Kit</strong> extension (go to the “Extensions” menu and search for “C# Dev Kit”), which also installs the <strong>C#</strong> extension. This provides:</p>
@@ -1015,20 +1015,20 @@
 </ul>
 <p>In VS Code, open the <strong>folder</strong> containing the programs (“File / Open Folder”), for example, the <em>[csharp-oct-2026]</em> folder with the examples from this document. The built-in terminal (“Terminal / New Terminal”) allows you to enter <em>[dotnet]</em> commands without leaving the editor.</p>
 <h3 id="222-visual-studio-2026">2.2.2. <span style="color: #1f4d78">Visual Studio 2026</span></h3>
-<p>On Windows, you may prefer to use <strong>Visual Studio 2026</strong>, the successor to Visual Studio 2008 used in the original course. Its <strong>Community</strong> edition is free for individuals, educational institutions, and open-source projects. Install it from<a href="https://visualstudio.microsoft.com/"><u><span style="color: #0563c1"> https://visualstudio.microsoft.com</span></u></a> by selecting the “.NET Desktop Development” workload (and “.ASP.NET Web Development” for Chapter 13). Visual Studio opens the <em>[.slnx]</em> solutions and <em>[.csproj]</em> projects from the examples directly (“File / Open / Project/Solution”), and runs them using <em>[Ctrl-F5]</em> (without debugging) or <em>[F5]</em> (with debugging), just as in 2008.</p>
+<p>On Windows, you may prefer to use <strong>Visual Studio 2026</strong>, the successor to Visual Studio 2008 used in the original course. Its <strong>Community</strong> edition is free for individuals, educational institutions, and open-source projects. Install it from<a href="https://visualstudio.microsoft.com/"><u><span style="color: #0563c1"> https://visualstudio.microsoft.com</span></u></a> by selecting the “.NET Desktop Development” workload (and “ASP.NET and web development” for Chapter 13). Visual Studio opens the <em>[.slnx]</em> solutions and <em>[.csproj]</em> projects from the examples directly (“File / Open / Project/Solution”), and runs them using <em>[Ctrl-F5]</em> (without debugging) or <em>[F5]</em> (with debugging), just as in 2008.</p>
 <p>A third option is <strong>JetBrains Rider</strong>, which is free for non-commercial use.</p>
 <p>In the rest of this document, the steps are described using the <em>[dotnet]</em> command, which produces the same results regardless of the editor.</p>
 <h2 id="23-a-first-program-a-single-file-application">2.3. <span style="color: #2e74b5">A First Program: A Single-File Application</span></h2>
 <h3 id="231-the-program">2.3.1. <span style="color: #1f4d78">The program</span></h3>
 <p>Starting with .NET 10, a C# program can be a single <em>[.cs]</em> file, without a project file. This is called a &quot;file-based app.&quot; Let&#x27;s create the following <em>[hello.cs]</em> file:</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-3-1">1</a></span>
-<span class="normal"><a href="#__codelineno-3-2">2</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1"></a><span class="c1">// First C# program: a single-file application</span>
-<a id="__codelineno-3-2" name="__codelineno-3-2"></a><span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="s">"1er essai avec C# 14 et .NET 10"</span><span class="p">);</span>
+<span class="normal"><a href="#__codelineno-3-2">2</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1"></a><span class="c1">// first C# program: a single-file application</span>
+<a id="__codelineno-3-2" name="__codelineno-3-2"></a><span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="s">"1st try with C# 14 and .NET 10"</span><span class="p">);</span>
 </code></pre></div></td></tr></table></div>
 <p>and run it:</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-4-1">1</a></span>
 <span class="normal"><a href="#__codelineno-4-2">2</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1"></a>&gt; dotnet run hello.cs
-<a id="__codelineno-4-2" name="__codelineno-4-2"></a>1er essai avec C# 14 and .NET 10
+<a id="__codelineno-4-2" name="__codelineno-4-2"></a>1st try with C# 14 and .NET 10
 </code></pre></div></td></tr></table></div>
 <p>Comments:</p>
 <ul>
@@ -1039,12 +1039,12 @@
 <p>Single-file applications are suitable for small programs, and we’ll use them for most of the examples. A few directives, placed at the beginning of the file, allow you to create them without a project file:</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-5-1">1</a></span>
 <span class="normal"><a href="#__codelineno-5-2">2</a></span>
-<span class="normal"><a href="#__codelineno-5-3">3</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1"></a><span class="err">#</span><span class="p">:</span><span class="w"> </span><span class="n">packageMySqlConnector</span><span class="err">@</span><span class="mf">2.4.0</span>
+<span class="normal"><a href="#__codelineno-5-3">3</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1"></a><span class="err">#</span><span class="p">:</span><span class="n">package</span><span class="w"> </span><span class="n">MySqlConnector</span><span class="err">@</span><span class="mf">2.4.0</span>
 <a id="__codelineno-5-2" name="__codelineno-5-2"></a><span class="err">#</span><span class="p">:</span><span class="n">property</span><span class="w"> </span><span class="n">PublishAot</span><span class="o">=</span><span class="k">false</span>
 <a id="__codelineno-5-3" name="__codelineno-5-3"></a><span class="err">#</span><span class="p">:</span><span class="n">sdk</span><span class="w"> </span><span class="n">Microsoft</span><span class="p">.</span><span class="n">NET</span><span class="p">.</span><span class="n">Sdk</span><span class="p">.</span><span class="n">Web</span>
 </code></pre></div></td></tr></table></div>
 <ul>
-<li>the directive <em>[#:package]</em> adds a library named NuGet (Chapter 10);</li>
+<li>the directive <em>[#:package]</em> adds a NuGet library (Chapter 10);</li>
 <li>the directive <em>[#:property]</em> sets a compilation property (Chapter 5);</li>
 <li>the <em>[#:sdk]</em> directive selects a different SDK, such as the one for web applications (Chapter 12).</li>
 </ul>
@@ -1057,7 +1057,7 @@
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-7-1">1</a></span>
 <span class="normal"><a href="#__codelineno-7-2">2</a></span>
 <span class="normal"><a href="#__codelineno-7-3">3</a></span>
-<span class="normal"><a href="#__codelineno-7-4">4</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1"></a>&gt; dir /s /b (liste des fichiers)
+<span class="normal"><a href="#__codelineno-7-4">4</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1"></a>&gt; dir /s /b (list of files)
 <a id="__codelineno-7-2" name="__codelineno-7-2"></a>hello.cs
 <a id="__codelineno-7-3" name="__codelineno-7-3"></a>hello/hello.cs
 <a id="__codelineno-7-4" name="__codelineno-7-4"></a>hello/hello.csproj
@@ -1099,16 +1099,16 @@
 <span class="normal"><a href="#__codelineno-9-5">5</a></span>
 <span class="normal"><a href="#__codelineno-9-6">6</a></span>
 <span class="normal"><a href="#__codelineno-9-7">7</a></span>
-<span class="normal"><a href="#__codelineno-9-8">8</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-9-1" name="__codelineno-9-1"></a>&gt; dotnet new console -n PremierProgramme
-<a id="__codelineno-9-2" name="__codelineno-9-2"></a>Le modèle « Application console » a bien été créé.
+<span class="normal"><a href="#__codelineno-9-8">8</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-9-1" name="__codelineno-9-1"></a>&gt; dotnet new console -n FirstProgram
+<a id="__codelineno-9-2" name="__codelineno-9-2"></a>The template "Console App" was created successfully.
 <a id="__codelineno-9-3" name="__codelineno-9-3"></a>
-<a id="__codelineno-9-4" name="__codelineno-9-4"></a>Traitement des actions postérieures à la création en cours... Merci de patienter.
-<a id="__codelineno-9-5" name="__codelineno-9-5"></a>Restauration de csharp-oct-2026/02-installation/PremierProgramme/PremierProgramme.csproj :
-<a id="__codelineno-9-6" name="__codelineno-9-6"></a>  Identification des projets à restaurer...
-<a id="__codelineno-9-7" name="__codelineno-9-7"></a>  Restauration effectuée de csharp-oct-2026/02-installation/PremierProgramme/PremierProgramme.csproj (en 127 ms).
-<a id="__codelineno-9-8" name="__codelineno-9-8"></a>Restauration réussie.
+<a id="__codelineno-9-4" name="__codelineno-9-4"></a>Processing post-creation actions...
+<a id="__codelineno-9-5" name="__codelineno-9-5"></a>Restoring csharp-oct-2026/02-installation/FirstProgram/FirstProgram.csproj:
+<a id="__codelineno-9-6" name="__codelineno-9-6"></a>  Determining projects to restore...
+<a id="__codelineno-9-7" name="__codelineno-9-7"></a>  Restored csharp-oct-2026/02-installation/FirstProgram/FirstProgram.csproj (in 127 ms).
+<a id="__codelineno-9-8" name="__codelineno-9-8"></a>Restore succeeded.
 </code></pre></div></td></tr></table></div>
-<p>The command created a folder named <em>[PremierProgramme]</em> containing two files. The project file <em>[PremierProgramme.csproj]</em> is as follows:</p>
+<p>The command created a folder named <em>[FirstProgram]</em> containing two files. The project file <em>[FirstProgram.csproj]</em> is as follows:</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-10-1"> 1</a></span>
 <span class="normal"><a href="#__codelineno-10-2"> 2</a></span>
 <span class="normal"><a href="#__codelineno-10-3"> 3</a></span>
@@ -1139,8 +1139,8 @@
 <p>The 2008 file described each source file in the project, library references, and Debug/Release configurations in about a hundred lines. The current project file contains only the settings that differ from the defaults: all <em>[.cs]</em> files in the folder are part of the project.</p>
 <p>We replace the contents of the generated <em>[Program.cs]</em> file with the following:</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-11-1">1</a></span>
-<span class="normal"><a href="#__codelineno-11-2">2</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-11-1" name="__codelineno-11-1"></a><span class="c1">// the main program of the project [PremierProgramme]</span>
-<a id="__codelineno-11-2" name="__codelineno-11-2"></a><span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="s">"1er essai avec un projet C# 14 / .NET 10"</span><span class="p">);</span>
+<span class="normal"><a href="#__codelineno-11-2">2</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-11-1" name="__codelineno-11-1"></a><span class="c1">// the main program of the [FirstProgram] project</span>
+<a id="__codelineno-11-2" name="__codelineno-11-2"></a><span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="s">"1st try with a C# 14 / .NET 10 project"</span><span class="p">);</span>
 </code></pre></div></td></tr></table></div>
 <h3 id="242-compilation-and-execution">2.4.2. <span style="color: #1f4d78">Compilation and Execution</span></h3>
 <p>The command <strong><em>[dotnet build]</em></strong>, entered in the project folder, compiles the project:</p>
@@ -1154,19 +1154,19 @@
 <span class="normal"><a href="#__codelineno-12-8"> 8</a></span>
 <span class="normal"><a href="#__codelineno-12-9"> 9</a></span>
 <span class="normal"><a href="#__codelineno-12-10">10</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-12-1" name="__codelineno-12-1"></a>&gt; dotnet build
-<a id="__codelineno-12-2" name="__codelineno-12-2"></a>  Identification des projets à restaurer...
-<a id="__codelineno-12-3" name="__codelineno-12-3"></a>  Tous les projets sont à jour pour la restauration.
-<a id="__codelineno-12-4" name="__codelineno-12-4"></a>  PremierProgramme -&gt; csharp-oct-2026/02-installation/PremierProgramme/bin/Debug/net10.0/PremierProgramme.dll
+<a id="__codelineno-12-2" name="__codelineno-12-2"></a>  Determining projects to restore...
+<a id="__codelineno-12-3" name="__codelineno-12-3"></a>  All projects are up-to-date for restore.
+<a id="__codelineno-12-4" name="__codelineno-12-4"></a>  FirstProgram -&gt; csharp-oct-2026/02-installation/FirstProgram/bin/Debug/net10.0/FirstProgram.dll
 <a id="__codelineno-12-5" name="__codelineno-12-5"></a>
-<a id="__codelineno-12-6" name="__codelineno-12-6"></a>La génération a réussi.
-<a id="__codelineno-12-7" name="__codelineno-12-7"></a>    0 Avertissement(s)
-<a id="__codelineno-12-8" name="__codelineno-12-8"></a>    0 Erreur(s)
+<a id="__codelineno-12-6" name="__codelineno-12-6"></a>Build succeeded.
+<a id="__codelineno-12-7" name="__codelineno-12-7"></a>    0 Warning(s)
+<a id="__codelineno-12-8" name="__codelineno-12-8"></a>    0 Error(s)
 <a id="__codelineno-12-9" name="__codelineno-12-9"></a>
-<a id="__codelineno-12-10" name="__codelineno-12-10"></a>Temps écoulé 00:00:01.56
+<a id="__codelineno-12-10" name="__codelineno-12-10"></a>Time Elapsed 00:00:01.56
 </code></pre></div></td></tr></table></div>
 <ul>
 <li>Line 2: The command begins by <strong>restoring</strong> the project, which means downloading the NuGet packages it depends on (there are none here);</li>
-<li>Line 4: The result of the compilation is a DLL and <em>[PremierProgramme.dll] file</em> placed in the project’s <em>[bin/Debug/net10.0]</em> folder. On Windows, the displayed path is a Windows path (<em>[bin\Debug\net10.0\PremierProgramme.dll]</em>).</li>
+<li>Line 4: The result of the compilation is a DLL and <em>[FirstProgram.dll] file</em> placed in the project’s <em>[bin/Debug/net10.0]</em> folder. On Windows, the displayed path is a Windows path (<em>[bin\Debug\net10.0\FirstProgram.dll]</em>).</li>
 </ul>
 <p>The <em>[bin/Debug/net10.0]</em> folder then contains the following files:</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-13-1">1</a></span>
@@ -1174,46 +1174,46 @@
 <span class="normal"><a href="#__codelineno-13-3">3</a></span>
 <span class="normal"><a href="#__codelineno-13-4">4</a></span>
 <span class="normal"><a href="#__codelineno-13-5">5</a></span>
-<span class="normal"><a href="#__codelineno-13-6">6</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-13-1" name="__codelineno-13-1"></a>&gt; dir bin\Debug\net10.0 (liste des fichiers)
-<a id="__codelineno-13-2" name="__codelineno-13-2"></a>PremierProgramme
-<a id="__codelineno-13-3" name="__codelineno-13-3"></a>PremierProgramme.deps.json
-<a id="__codelineno-13-4" name="__codelineno-13-4"></a>PremierProgramme.dll
-<a id="__codelineno-13-5" name="__codelineno-13-5"></a>PremierProgramme.pdb
-<a id="__codelineno-13-6" name="__codelineno-13-6"></a>PremierProgramme.runtimeconfig.json
+<span class="normal"><a href="#__codelineno-13-6">6</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-13-1" name="__codelineno-13-1"></a>&gt; dir bin\Debug\net10.0 (list of files)
+<a id="__codelineno-13-2" name="__codelineno-13-2"></a>FirstProgram
+<a id="__codelineno-13-3" name="__codelineno-13-3"></a>FirstProgram.deps.json
+<a id="__codelineno-13-4" name="__codelineno-13-4"></a>FirstProgram.dll
+<a id="__codelineno-13-5" name="__codelineno-13-5"></a>FirstProgram.pdb
+<a id="__codelineno-13-6" name="__codelineno-13-6"></a>FirstProgram.runtimeconfig.json
 </code></pre></div></td></tr></table></div>
 <ul>
-<li><em>[PremierProgramme.dll]</em> contains the compiled code (in intermediate code IL);</li>
-<li><em>[PremierProgramme]</em> (on Windows, <em>[PremierProgramme.exe]</em>) is a small launcher that starts the .NET platform and causes it to execute DLL;</li>
-<li><em>[PremierProgramme.pdb]</em> contains the information used by the debugger;</li>
+<li><em>[FirstProgram.dll]</em> contains the compiled code (in intermediate code IL);</li>
+<li><em>[FirstProgram]</em> (on Windows, <em>[FirstProgram.exe]</em>) is a small launcher that starts the .NET platform and causes it to execute the DLL;</li>
+<li><em>[FirstProgram.pdb]</em> contains the information used by the debugger;</li>
 <li>the two <em>[.json]</em> files describe the program’s dependencies and the version of .NET required to run it.</li>
 </ul>
 <p>You can run the launcher directly:</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-14-1">1</a></span>
-<span class="normal"><a href="#__codelineno-14-2">2</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-14-1" name="__codelineno-14-1"></a>&gt; PremierProgramme
-<a id="__codelineno-14-2" name="__codelineno-14-2"></a>1er essai avec un projet C# 14 / .NET 10
+<span class="normal"><a href="#__codelineno-14-2">2</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-14-1" name="__codelineno-14-1"></a>&gt; FirstProgram
+<a id="__codelineno-14-2" name="__codelineno-14-2"></a>1st try with a C# 14 / .NET 10 project
 </code></pre></div></td></tr></table></div>
 <p>However, the <strong><em>[dotnet run]</em></strong> command is most commonly used; it compiles the project if necessary and then runs it:</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-15-1">1</a></span>
 <span class="normal"><a href="#__codelineno-15-2">2</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-15-1" name="__codelineno-15-1"></a>&gt; dotnet run
-<a id="__codelineno-15-2" name="__codelineno-15-2"></a>1er essai avec un projet C# 14 / .NET 10
+<a id="__codelineno-15-2" name="__codelineno-15-2"></a>1st try with a C# 14 / .NET 10 project
 </code></pre></div></td></tr></table></div>
 <p>As in 2008, there are two build configurations: <strong>Debug</strong> (default, with debug information) and <strong>Release</strong> (optimized, for production), selected using the option <strong><em>[-c Release]</em></strong>: <strong><em>[dotnet build -c Release]</em></strong> generates the program in the <em>[bin/Release/net10.0]</em> folder. The <em>[obj]</em> folder contains intermediate compilation files. The <em>[bin]</em> and <em>[obj]</em> folders can be safely deleted: they are recreated during the next compilation.</p>
 <h2 id="25-a-solution-with-multiple-projects">2.5. <span style="color: #2e74b5">A Solution with Multiple Projects</span></h2>
 <h3 id="251-creating-the-solution">2.5.1. <span style="color: #1f4d78">Creating the solution</span></h3>
-<p>A <strong>solution</strong> groups multiple projects together. It allows you to open them together in the editor and compile them together. Let’s create a solution in the folder containing the <em>[PremierProgramme]</em> project:</p>
+<p>A <strong>solution</strong> groups multiple projects together. It allows you to open them together in the editor and compile them together. Let’s create a solution in the folder containing the <em>[FirstProgram]</em> project:</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-16-1">1</a></span>
 <span class="normal"><a href="#__codelineno-16-2">2</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-16-1" name="__codelineno-16-1"></a>&gt; dotnet new sln -n 02-installation
-<a id="__codelineno-16-2" name="__codelineno-16-2"></a>Le modèle « Fichier solution » a bien été créé.
+<a id="__codelineno-16-2" name="__codelineno-16-2"></a>The template "Solution File" was created successfully.
 </code></pre></div></td></tr></table></div>
 <p>then let’s add the project to it:</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-17-1">1</a></span>
-<span class="normal"><a href="#__codelineno-17-2">2</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-17-1" name="__codelineno-17-1"></a>&gt; dotnet sln add PremierProgramme
-<a id="__codelineno-17-2" name="__codelineno-17-2"></a>Projet 'PremierProgramme/PremierProgramme.csproj' ajouté à la solution.
+<span class="normal"><a href="#__codelineno-17-2">2</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-17-1" name="__codelineno-17-1"></a>&gt; dotnet sln add FirstProgram
+<a id="__codelineno-17-2" name="__codelineno-17-2"></a>Project `FirstProgram/FirstProgram.csproj` added to the solution.
 </code></pre></div></td></tr></table></div>
-<p>Let’s add a second project, <em>[DeuxMains]</em>, whose contents we’ll look at below:</p>
+<p>Let’s add a second project, <em>[TwoHands]</em>, whose contents we’ll look at below:</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-18-1">1</a></span>
-<span class="normal"><a href="#__codelineno-18-2">2</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-18-1" name="__codelineno-18-1"></a>&gt; dotnet sln add DeuxMains
-<a id="__codelineno-18-2" name="__codelineno-18-2"></a>Projet 'DeuxMains/DeuxMains.csproj' ajouté à la solution.
+<span class="normal"><a href="#__codelineno-18-2">2</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-18-1" name="__codelineno-18-1"></a>&gt; dotnet sln add TwoHands
+<a id="__codelineno-18-2" name="__codelineno-18-2"></a>Project `TwoHands/TwoHands.csproj` added to the solution.
 </code></pre></div></td></tr></table></div>
 <p>The command <strong><em>[dotnet sln list]</em></strong> lists the projects in the solution:</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-19-1">1</a></span>
@@ -1221,24 +1221,24 @@
 <span class="normal"><a href="#__codelineno-19-3">3</a></span>
 <span class="normal"><a href="#__codelineno-19-4">4</a></span>
 <span class="normal"><a href="#__codelineno-19-5">5</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-19-1" name="__codelineno-19-1"></a>&gt; dotnet sln list
-<a id="__codelineno-19-2" name="__codelineno-19-2"></a>Projet(s)
-<a id="__codelineno-19-3" name="__codelineno-19-3"></a>---------
-<a id="__codelineno-19-4" name="__codelineno-19-4"></a>DeuxMains/DeuxMains.csproj
-<a id="__codelineno-19-5" name="__codelineno-19-5"></a>PremierProgramme/PremierProgramme.csproj
+<a id="__codelineno-19-2" name="__codelineno-19-2"></a>Project(s)
+<a id="__codelineno-19-3" name="__codelineno-19-3"></a>----------
+<a id="__codelineno-19-4" name="__codelineno-19-4"></a>FirstProgram/FirstProgram.csproj
+<a id="__codelineno-19-5" name="__codelineno-19-5"></a>TwoHands/TwoHands.csproj
 </code></pre></div></td></tr></table></div>
 <p>The solution file <em>[02-installation.slnx]</em> is as follows:</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-20-1">1</a></span>
 <span class="normal"><a href="#__codelineno-20-2">2</a></span>
 <span class="normal"><a href="#__codelineno-20-3">3</a></span>
 <span class="normal"><a href="#__codelineno-20-4">4</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-20-1" name="__codelineno-20-1"></a><span class="nt">&lt;Solution&gt;</span>
-<a id="__codelineno-20-2" name="__codelineno-20-2"></a><span class="w">  </span><span class="nt">&lt;Project</span><span class="w"> </span><span class="na">Path=</span><span class="s">"DeuxMains/DeuxMains.csproj"</span><span class="w"> </span><span class="nt">/&gt;</span>
-<a id="__codelineno-20-3" name="__codelineno-20-3"></a><span class="w">  </span><span class="nt">&lt;Project</span><span class="w"> </span><span class="na">Path=</span><span class="s">"PremierProgramme/PremierProgramme.csproj"</span><span class="w"> </span><span class="nt">/&gt;</span>
+<a id="__codelineno-20-2" name="__codelineno-20-2"></a><span class="w">  </span><span class="nt">&lt;Project</span><span class="w"> </span><span class="na">Path=</span><span class="s">"TwoHands/TwoHands.csproj"</span><span class="w"> </span><span class="nt">/&gt;</span>
+<a id="__codelineno-20-3" name="__codelineno-20-3"></a><span class="w">  </span><span class="nt">&lt;Project</span><span class="w"> </span><span class="na">Path=</span><span class="s">"FirstProgram/FirstProgram.csproj"</span><span class="w"> </span><span class="nt">/&gt;</span>
 <a id="__codelineno-20-4" name="__codelineno-20-4"></a><span class="nt">&lt;/Solution&gt;</span>
 </code></pre></div></td></tr></table></div>
 <p>This is a very simple XML file. Since .NET 10, this has been the default format for solutions (<em>[.slnx]</em>). The old <em>[.sln]</em> format, used in Visual Studio 2008, was much more verbose; it is still found in existing projects, and the <strong><em>[dotnet new sln --format sln]</em></strong> command can still be used to create it.</p>
-<p>In the solution folder, the command <strong><em>[dotnet build]</em></strong> compiles all projects in the solution. To run a specific project, navigate to its folder and type <strong><em>[dotnet run]</em></strong>, or use the <strong><em>[--project]</em></strong> option: <strong><em>[dotnet run --project PremierProgramme]</em></strong>.</p>
+<p>In the solution folder, the command <strong><em>[dotnet build]</em></strong> compiles all projects in the solution. To run a specific project, navigate to its folder and type <strong><em>[dotnet run]</em></strong>, or use the <strong><em>[--project]</em></strong> option: <strong><em>[dotnet run --project FirstProgram]</em></strong>.</p>
 <h3 id="252-a-project-with-multiple-main-methods">2.5.2. <span style="color: #1f4d78">A Project with Multiple Main Methods</span></h3>
-<p>The 2008 course demonstrated that a project can contain multiple classes, each with a static method named <em>[Main]</em>, and that you must specify which one to execute. This is still possible. The project <em>[DeuxMains]</em> contains two classes. The class <em>[P1]</em>:</p>
+<p>The 2008 course demonstrated that a project can contain multiple classes, each with a static method named <em>[Main]</em>, and that you must specify which one to execute. This is still possible. The project <em>[TwoHands]</em> contains two classes. The class <em>[P1]</em>:</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-21-1">1</a></span>
 <span class="normal"><a href="#__codelineno-21-2">2</a></span>
 <span class="normal"><a href="#__codelineno-21-3">3</a></span>
@@ -1247,13 +1247,13 @@
 <span class="normal"><a href="#__codelineno-21-6">6</a></span>
 <span class="normal"><a href="#__codelineno-21-7">7</a></span>
 <span class="normal"><a href="#__codelineno-21-8">8</a></span>
-<span class="normal"><a href="#__codelineno-21-9">9</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-21-1" name="__codelineno-21-1"></a><span class="k">namespace</span><span class="w"> </span><span class="nn">DeuxMains</span><span class="p">;</span>
+<span class="normal"><a href="#__codelineno-21-9">9</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-21-1" name="__codelineno-21-1"></a><span class="k">namespace</span><span class="w"> </span><span class="nn">TwoHands</span><span class="p">;</span>
 <a id="__codelineno-21-2" name="__codelineno-21-2"></a>
 <a id="__codelineno-21-3" name="__codelineno-21-3"></a><span class="k">class</span><span class="w"> </span><span class="nc">P1</span>
 <a id="__codelineno-21-4" name="__codelineno-21-4"></a><span class="p">{</span>
 <a id="__codelineno-21-5" name="__codelineno-21-5"></a><span class="w">    </span><span class="k">static</span><span class="w"> </span><span class="k">void</span><span class="w"> </span><span class="nf">Main</span><span class="p">(</span><span class="kt">string</span><span class="p">[]</span><span class="w"> </span><span class="n">args</span><span class="p">)</span>
 <a id="__codelineno-21-6" name="__codelineno-21-6"></a><span class="w">    </span><span class="p">{</span>
-<a id="__codelineno-21-7" name="__codelineno-21-7"></a><span class="w">        </span><span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="s">"Main de la classe P1"</span><span class="p">);</span>
+<a id="__codelineno-21-7" name="__codelineno-21-7"></a><span class="w">        </span><span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="s">"Main of class P1"</span><span class="p">);</span>
 <a id="__codelineno-21-8" name="__codelineno-21-8"></a><span class="w">    </span><span class="p">}</span>
 <a id="__codelineno-21-9" name="__codelineno-21-9"></a><span class="p">}</span>
 </code></pre></div></td></tr></table></div>
@@ -1266,20 +1266,20 @@
 <span class="normal"><a href="#__codelineno-22-6">6</a></span>
 <span class="normal"><a href="#__codelineno-22-7">7</a></span>
 <span class="normal"><a href="#__codelineno-22-8">8</a></span>
-<span class="normal"><a href="#__codelineno-22-9">9</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-22-1" name="__codelineno-22-1"></a><span class="k">namespace</span><span class="w"> </span><span class="nn">DeuxMains</span><span class="p">;</span>
+<span class="normal"><a href="#__codelineno-22-9">9</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-22-1" name="__codelineno-22-1"></a><span class="k">namespace</span><span class="w"> </span><span class="nn">TwoHands</span><span class="p">;</span>
 <a id="__codelineno-22-2" name="__codelineno-22-2"></a>
 <a id="__codelineno-22-3" name="__codelineno-22-3"></a><span class="k">class</span><span class="w"> </span><span class="nc">P2</span>
 <a id="__codelineno-22-4" name="__codelineno-22-4"></a><span class="p">{</span>
 <a id="__codelineno-22-5" name="__codelineno-22-5"></a><span class="w">    </span><span class="k">static</span><span class="w"> </span><span class="k">void</span><span class="w"> </span><span class="nf">Main</span><span class="p">(</span><span class="kt">string</span><span class="p">[]</span><span class="w"> </span><span class="n">args</span><span class="p">)</span>
 <a id="__codelineno-22-6" name="__codelineno-22-6"></a><span class="w">    </span><span class="p">{</span>
-<a id="__codelineno-22-7" name="__codelineno-22-7"></a><span class="w">        </span><span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="s">"Main de la classe P2"</span><span class="p">);</span>
+<a id="__codelineno-22-7" name="__codelineno-22-7"></a><span class="w">        </span><span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="s">"Main of class P2"</span><span class="p">);</span>
 <a id="__codelineno-22-8" name="__codelineno-22-8"></a><span class="w">    </span><span class="p">}</span>
 <a id="__codelineno-22-9" name="__codelineno-22-9"></a><span class="p">}</span>
 </code></pre></div></td></tr></table></div>
 <p>If you compile the project without taking any further precautions, you’ll get an error:</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-23-1">1</a></span>
 <span class="normal"><a href="#__codelineno-23-2">2</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-23-1" name="__codelineno-23-1"></a>&gt; dotnet build
-<a id="__codelineno-23-2" name="__codelineno-23-2"></a>...\DeuxMains\P1.cs(5,17): error CS0017: Plusieurs points d'entrée sont définis dans le programme. Compilez avec l'option /main pour spécifier le type qui contient le point d'entrée. 
+<a id="__codelineno-23-2" name="__codelineno-23-2"></a>...\TwoHands\P1.cs(5,17): error CS0017: Program has more than one entry point defined. Compile with /main to specify the type that contains the entry point. 
 </code></pre></div></td></tr></table></div>
 <p>The compiler does not know which method, <em>[Main]</em>, is the program’s entry point. We specify this in the project file using the <em>[StartupObject]</em> property:</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-24-1"> 1</a></span>
@@ -1300,19 +1300,19 @@
 <a id="__codelineno-24-5" name="__codelineno-24-5"></a><span class="w">    </span><span class="nt">&lt;TargetFramework&gt;</span>net10.0<span class="nt">&lt;/TargetFramework&gt;</span>
 <a id="__codelineno-24-6" name="__codelineno-24-6"></a><span class="w">    </span><span class="nt">&lt;ImplicitUsings&gt;</span>enable<span class="nt">&lt;/ImplicitUsings&gt;</span>
 <a id="__codelineno-24-7" name="__codelineno-24-7"></a><span class="w">    </span><span class="nt">&lt;Nullable&gt;</span>enable<span class="nt">&lt;/Nullable&gt;</span>
-<a id="__codelineno-24-8" name="__codelineno-24-8"></a><span class="w">     </span><span class="cm">&lt;!-- the class whose Main method is executed --&gt;</span>
-<a id="__codelineno-24-9" name="__codelineno-24-9"></a><span class="w">    </span><span class="nt">&lt;StartupObject&gt;</span>DeuxMains.P2<span class="nt">&lt;/StartupObject&gt;</span>
+<a id="__codelineno-24-8" name="__codelineno-24-8"></a><span class="w">    </span><span class="cm">&lt;!-- the class whose Main method is executed --&gt;</span>
+<a id="__codelineno-24-9" name="__codelineno-24-9"></a><span class="w">    </span><span class="nt">&lt;StartupObject&gt;</span>TwoHands.P2<span class="nt">&lt;/StartupObject&gt;</span>
 <a id="__codelineno-24-10" name="__codelineno-24-10"></a><span class="w">  </span><span class="nt">&lt;/PropertyGroup&gt;</span>
 <a id="__codelineno-24-11" name="__codelineno-24-11"></a>
 <a id="__codelineno-24-12" name="__codelineno-24-12"></a><span class="nt">&lt;/Project&gt;</span>
 </code></pre></div></td></tr></table></div>
 <ul>
-<li>Line 9: The method <em>[Main]</em> that was executed belongs to the class <em>[DeuxMains.P2]</em> (the full class name, including the namespace).</li>
+<li>Line 9: The method <em>[Main]</em> that was executed belongs to the class <em>[TwoHands.P2]</em> (the full class name, including the namespace).</li>
 </ul>
 <p>Results:</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-25-1">1</a></span>
 <span class="normal"><a href="#__codelineno-25-2">2</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-25-1" name="__codelineno-25-1"></a>&gt; dotnet run
-<a id="__codelineno-25-2" name="__codelineno-25-2"></a>Main de la classe P2
+<a id="__codelineno-25-2" name="__codelineno-25-2"></a>Main of class P2
 </code></pre></div></td></tr></table></div>
 <p>With high-level statements (Chapter 3), the question no longer arises: a single file in a project can contain them, and that file serves as the entry point.</p>
 <h2 id="26-examples-in-this-document">2.6. <span style="color: #2e74b5">Examples in this document</span></h2>
@@ -1320,9 +1320,9 @@
 <ul>
 <li>download the <em>[csharp-oct-2026]</em> folder (link at the beginning of the document);</li>
 <li>open it in VS Code (“File / Open Folder”) or, for a specific chapter, open the chapter’s solution (<em>[.slnx])</em> in Visual Studio;</li>
-<li>in a terminal located in a chapter’s folder, run a single-file application using <strong><em>[dotnet run nom.cs]</em></strong>, or a project using <strong><em>[dotnet run]</em></strong> in the project folder.</li>
+<li>in a terminal located in a chapter’s folder, run a single-file application using <strong><em>[dotnet run name.cs]</em></strong>, or a project using <strong><em>[dotnet run]</em></strong> in the project folder.</li>
 </ul>
-<p>Chapters 10 and 11 use a database named MySQL; the installation of MySQL with <em>[Laragon]</em> is described in the appendix.</p>
+<p>Chapters 10 and 11 use a MySQL database; the installation of MySQL with <em>[Laragon]</em> is described in the appendix.</p>
 
 
 
